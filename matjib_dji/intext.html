@@ -1,0 +1,3291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>대전연 맛집 지도</title>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9a51b4064659b9284928dd5496a506ac {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:9999;background:#fff;
+padding:6px 16px;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.3);font:bold 18px 'Malgun Gothic',sans-serif">대전연 맛집 지도</div>
+<div style="position:fixed;bottom:24px;right:10px;z-index:9999;background:#fff;padding:8px 12px;border-radius:8px;
+box-shadow:0 1px 4px rgba(0,0,0,.3);font:13px 'Malgun Gothic',sans-serif;line-height:1.7"><div><span style='display:inline-block;width:12px;height:12px;background:#f57c00;border-radius:3px;margin-right:6px'></span>일반식당 42곳</div><div><span style='display:inline-block;width:12px;height:12px;background:#2e7d32;border-radius:3px;margin-right:6px'></span>행사 후 식당 5곳</div><div><span style='display:inline-block;width:12px;height:12px;background:#1565c0;border-radius:3px;margin-right:6px'></span>저녁회식 11곳</div><div><span style='display:inline-block;width:12px;height:12px;background:#7b1fa2;border-radius:3px;margin-right:6px'></span>카페 9곳</div><div><span style='display:inline-block;width:12px;height:12px;background:#c62828;border-radius:3px;margin-right:6px'></span>초과식당 4곳</div></div>
+    
+            <div class="folium-map" id="map_9a51b4064659b9284928dd5496a506ac" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9a51b4064659b9284928dd5496a506ac = L.map(
+                "map_9a51b4064659b9284928dd5496a506ac",
+                {
+                    center: [36.397924, 127.40247],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 16,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_482542e15f0cb747d785efbbaa80a430 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_482542e15f0cb747d785efbbaa80a430.addTo(map_9a51b4064659b9284928dd5496a506ac);
+        
+    
+            var feature_group_570567ade2a48696bc506a5fc991f4b7 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_0c8b9d125edc2a885fce93cd9ecf2f33 = L.marker(
+                [36.3973152492161, 127.403653242989],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_98fc4b5c212f23f04d6bae1930fb90b9 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud558\uc120\uc0dd\uc9ec\ubf55\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_db0e5b3134f29cc46624e5ae9feb9621 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_542b621478522898f8cccfd3558bf40c = $(`<div id="html_542b621478522898f8cccfd3558bf40c" style="width: 100.0%; height: 100.0%;"><b>하선생짬뽕</b><br>대전 유성구 전민로14번길 12<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/하선생짬뽕' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_db0e5b3134f29cc46624e5ae9feb9621.setContent(html_542b621478522898f8cccfd3558bf40c);
+            
+        
+
+        marker_0c8b9d125edc2a885fce93cd9ecf2f33.bindPopup(popup_db0e5b3134f29cc46624e5ae9feb9621)
+        ;
+
+        
+    
+    
+            marker_0c8b9d125edc2a885fce93cd9ecf2f33.bindTooltip(
+                `<div>
+                     하선생짬뽕 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0c8b9d125edc2a885fce93cd9ecf2f33.setIcon(div_icon_98fc4b5c212f23f04d6bae1930fb90b9);
+            
+    
+            var marker_47848cf9dc32b4a0595ab6e1e647bda8 = L.marker(
+                [36.3968953121429, 127.402021383008],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_1c1465800ac580a8ef8e2f253fcbe2c3 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uace0\uace0\uc9ec\ubf55\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_a75e0b9093da82afb48008c2ca009876 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_81f5b5f2498cd248eee1d9716a88ac23 = $(`<div id="html_81f5b5f2498cd248eee1d9716a88ac23" style="width: 100.0%; height: 100.0%;"><b>고고짬뽕</b><br>대전 유성구 전민로46번길 29<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/고고짬뽕' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_a75e0b9093da82afb48008c2ca009876.setContent(html_81f5b5f2498cd248eee1d9716a88ac23);
+            
+        
+
+        marker_47848cf9dc32b4a0595ab6e1e647bda8.bindPopup(popup_a75e0b9093da82afb48008c2ca009876)
+        ;
+
+        
+    
+    
+            marker_47848cf9dc32b4a0595ab6e1e647bda8.bindTooltip(
+                `<div>
+                     고고짬뽕 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_47848cf9dc32b4a0595ab6e1e647bda8.setIcon(div_icon_1c1465800ac580a8ef8e2f253fcbe2c3);
+            
+    
+            var marker_7d40acb25b92b99ca65be73580968755 = L.marker(
+                [36.398263687776, 127.400694447952],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_0eb794f205a7d263f7ddc338e3d1e42e = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc131\ud654\uc9ec\ubf55\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_35c216986837e0dad0df27c7ee3cd699 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5f0223e09839a98aef8a6e086bc23528 = $(`<div id="html_5f0223e09839a98aef8a6e086bc23528" style="width: 100.0%; height: 100.0%;"><b>성화짬뽕</b><br>대전 유성구 전민로38번길 33<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/성화짬뽕' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_35c216986837e0dad0df27c7ee3cd699.setContent(html_5f0223e09839a98aef8a6e086bc23528);
+            
+        
+
+        marker_7d40acb25b92b99ca65be73580968755.bindPopup(popup_35c216986837e0dad0df27c7ee3cd699)
+        ;
+
+        
+    
+    
+            marker_7d40acb25b92b99ca65be73580968755.bindTooltip(
+                `<div>
+                     성화짬뽕 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7d40acb25b92b99ca65be73580968755.setIcon(div_icon_0eb794f205a7d263f7ddc338e3d1e42e);
+            
+    
+            var marker_f175e82ac4e8dbea812dc565ec879569 = L.marker(
+                [36.3975265942186, 127.401400844148],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_21109038fd11092ffbc4af21f5e6a882 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc81c\uc8fc\uc9c4\uace0\uae30\uad6d\uc218\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_dd8cbe01a8fe65863440f1050b67067d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7b7fae0b8e7b280c1e1974c87a46b878 = $(`<div id="html_7b7fae0b8e7b280c1e1974c87a46b878" style="width: 100.0%; height: 100.0%;"><b>제주진고기국수</b><br>대전 유성구 전민로34번길 26<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/제주진고기국수' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_dd8cbe01a8fe65863440f1050b67067d.setContent(html_7b7fae0b8e7b280c1e1974c87a46b878);
+            
+        
+
+        marker_f175e82ac4e8dbea812dc565ec879569.bindPopup(popup_dd8cbe01a8fe65863440f1050b67067d)
+        ;
+
+        
+    
+    
+            marker_f175e82ac4e8dbea812dc565ec879569.bindTooltip(
+                `<div>
+                     제주진고기국수 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f175e82ac4e8dbea812dc565ec879569.setIcon(div_icon_21109038fd11092ffbc4af21f5e6a882);
+            
+    
+            var marker_232605e40dc40e541b64bf265c3dbab4 = L.marker(
+                [36.397941488134, 127.401857446149],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_92d5e62f1ff0ecc48ec18c3a915316db = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ub178\uc740\ub301\uac08\ube44\uae40\uce58\ucc0c\uac1c\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_331ce461b8da98a839329471827071d0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e3087fff61b6138de8f8767fe044d0ec = $(`<div id="html_e3087fff61b6138de8f8767fe044d0ec" style="width: 100.0%; height: 100.0%;"><b>노은댁갈비김치찌개</b><br>대전 유성구 전민로30번길 26<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/노은댁갈비김치찌개' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_331ce461b8da98a839329471827071d0.setContent(html_e3087fff61b6138de8f8767fe044d0ec);
+            
+        
+
+        marker_232605e40dc40e541b64bf265c3dbab4.bindPopup(popup_331ce461b8da98a839329471827071d0)
+        ;
+
+        
+    
+    
+            marker_232605e40dc40e541b64bf265c3dbab4.bindTooltip(
+                `<div>
+                     노은댁갈비김치찌개 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_232605e40dc40e541b64bf265c3dbab4.setIcon(div_icon_92d5e62f1ff0ecc48ec18c3a915316db);
+            
+    
+            var marker_9573f6e0296a0f22872a18bbe9d37f06 = L.marker(
+                [36.3981592498136, 127.400477322491],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_9c96114e81462a3d481e5afa4e26cb24 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uad6d\uc601\uc218\ub5a1\ubcf6\uc774\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_6ef2285ca6c7283fbfe43ed102ee686b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_93182456f0e8f985cbd76c46c3fbd390 = $(`<div id="html_93182456f0e8f985cbd76c46c3fbd390" style="width: 100.0%; height: 100.0%;"><b>국영수떡볶이</b><br>대전 유성구 전민로 62<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/국영수떡볶이' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_6ef2285ca6c7283fbfe43ed102ee686b.setContent(html_93182456f0e8f985cbd76c46c3fbd390);
+            
+        
+
+        marker_9573f6e0296a0f22872a18bbe9d37f06.bindPopup(popup_6ef2285ca6c7283fbfe43ed102ee686b)
+        ;
+
+        
+    
+    
+            marker_9573f6e0296a0f22872a18bbe9d37f06.bindTooltip(
+                `<div>
+                     국영수떡볶이 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9573f6e0296a0f22872a18bbe9d37f06.setIcon(div_icon_9c96114e81462a3d481e5afa4e26cb24);
+            
+    
+            var marker_de9f688a3df3ff00c7899a7a385f3ff1 = L.marker(
+                [36.3983702617691, 127.400489663767],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_61f15288de3df6428a0e1f8a288ab44d = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud654\ubaa9\ud55c\uc6b0\ub9ac\uc9d1\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_eb1e6a34ed953019ce18eacb202ba429 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_58bd324bbb9e533d1d13a07f4452eec2 = $(`<div id="html_58bd324bbb9e533d1d13a07f4452eec2" style="width: 100.0%; height: 100.0%;"><b>화목한우리집</b><br>대전 유성구 전민로 64<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/화목한우리집' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_eb1e6a34ed953019ce18eacb202ba429.setContent(html_58bd324bbb9e533d1d13a07f4452eec2);
+            
+        
+
+        marker_de9f688a3df3ff00c7899a7a385f3ff1.bindPopup(popup_eb1e6a34ed953019ce18eacb202ba429)
+        ;
+
+        
+    
+    
+            marker_de9f688a3df3ff00c7899a7a385f3ff1.bindTooltip(
+                `<div>
+                     화목한우리집 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_de9f688a3df3ff00c7899a7a385f3ff1.setIcon(div_icon_61f15288de3df6428a0e1f8a288ab44d);
+            
+    
+            var marker_bb79a58aea4a5630d3910dc5fc23d01f = L.marker(
+                [36.3989891670472, 127.402505034698],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_4dd098d6cfda811a4c481b3a704db787 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud788\ub85c\uc2dc\ub77c\uba58\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_31f63e7b031c9ec71b01e4b3fc71f61c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7001b39d5a62744b05ad1b12cbd4cdff = $(`<div id="html_7001b39d5a62744b05ad1b12cbd4cdff" style="width: 100.0%; height: 100.0%;"><b>히로시라멘</b><br>대전 유성구 전민로70번길 39<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/히로시라멘' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_31f63e7b031c9ec71b01e4b3fc71f61c.setContent(html_7001b39d5a62744b05ad1b12cbd4cdff);
+            
+        
+
+        marker_bb79a58aea4a5630d3910dc5fc23d01f.bindPopup(popup_31f63e7b031c9ec71b01e4b3fc71f61c)
+        ;
+
+        
+    
+    
+            marker_bb79a58aea4a5630d3910dc5fc23d01f.bindTooltip(
+                `<div>
+                     히로시라멘 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bb79a58aea4a5630d3910dc5fc23d01f.setIcon(div_icon_4dd098d6cfda811a4c481b3a704db787);
+            
+    
+            var marker_a0cdb80bb7014a0e3a28c7489d1cd7c6 = L.marker(
+                [36.398682097532, 127.403398908648],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_10f846b244df74b15d278e69697089b7 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud55c\ubc29\uc0bc\uacc4\ud0d5\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_ad9127e04afcda58225bc44870e2f498 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3b9166c69cdb2931db78dabd4300e40d = $(`<div id="html_3b9166c69cdb2931db78dabd4300e40d" style="width: 100.0%; height: 100.0%;"><b>한방삼계탕</b><br>대전 유성구 전민로14번길 43<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/한방삼계탕' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_ad9127e04afcda58225bc44870e2f498.setContent(html_3b9166c69cdb2931db78dabd4300e40d);
+            
+        
+
+        marker_a0cdb80bb7014a0e3a28c7489d1cd7c6.bindPopup(popup_ad9127e04afcda58225bc44870e2f498)
+        ;
+
+        
+    
+    
+            marker_a0cdb80bb7014a0e3a28c7489d1cd7c6.bindTooltip(
+                `<div>
+                     한방삼계탕 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a0cdb80bb7014a0e3a28c7489d1cd7c6.setIcon(div_icon_10f846b244df74b15d278e69697089b7);
+            
+    
+            var marker_b73c5ad7f21be1b841e1eac01a1b82d3 = L.marker(
+                [36.3980431770541, 127.402488675083],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_aa0cb63231ca47404bc1dcf93366a2ce = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uace0\ubc14\uc0ac\uc774\uacf5\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_c70a0d7feb5dbc1b22bf5c348627c151 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_59a08d043337233b66301dd386c909d7 = $(`<div id="html_59a08d043337233b66301dd386c909d7" style="width: 100.0%; height: 100.0%;"><b>고바사이공</b><br>대전 유성구 전민로22번길 37<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/고바사이공' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_c70a0d7feb5dbc1b22bf5c348627c151.setContent(html_59a08d043337233b66301dd386c909d7);
+            
+        
+
+        marker_b73c5ad7f21be1b841e1eac01a1b82d3.bindPopup(popup_c70a0d7feb5dbc1b22bf5c348627c151)
+        ;
+
+        
+    
+    
+            marker_b73c5ad7f21be1b841e1eac01a1b82d3.bindTooltip(
+                `<div>
+                     고바사이공 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b73c5ad7f21be1b841e1eac01a1b82d3.setIcon(div_icon_aa0cb63231ca47404bc1dcf93366a2ce);
+            
+    
+            var marker_211d84df275550bf0ae6bb2e500c0582 = L.marker(
+                [36.3981534453054, 127.402498941689],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_222451d4d37e296f462548d206b4aacb = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ubd81\uacbd\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_95447cb8647943263cd0dd77c8557ad3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5d37416c3721a6cd93593b6622d9fe67 = $(`<div id="html_5d37416c3721a6cd93593b6622d9fe67" style="width: 100.0%; height: 100.0%;"><b>북경</b><br>대전 유성구 전민로22번길 39<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/북경' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_95447cb8647943263cd0dd77c8557ad3.setContent(html_5d37416c3721a6cd93593b6622d9fe67);
+            
+        
+
+        marker_211d84df275550bf0ae6bb2e500c0582.bindPopup(popup_95447cb8647943263cd0dd77c8557ad3)
+        ;
+
+        
+    
+    
+            marker_211d84df275550bf0ae6bb2e500c0582.bindTooltip(
+                `<div>
+                     북경 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_211d84df275550bf0ae6bb2e500c0582.setIcon(div_icon_222451d4d37e296f462548d206b4aacb);
+            
+    
+            var marker_1963fd2958f427857853994a76b2327a = L.marker(
+                [36.4086638398638, 127.39706054061],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_fee3089ef94266b1ace83ef9c7a5f1b0 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc88b\uc740\ub0a0(\ubcf4\ub9ac\ubc25)\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_e18d2456e261c73a7f70fa919e3995a6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8f056e3c09cc979de05161e66a825394 = $(`<div id="html_8f056e3c09cc979de05161e66a825394" style="width: 100.0%; height: 100.0%;"><b>좋은날(보리밥)</b><br>대전 유성구 엑스포로539번길 202-8<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/좋은날(보리밥)' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_e18d2456e261c73a7f70fa919e3995a6.setContent(html_8f056e3c09cc979de05161e66a825394);
+            
+        
+
+        marker_1963fd2958f427857853994a76b2327a.bindPopup(popup_e18d2456e261c73a7f70fa919e3995a6)
+        ;
+
+        
+    
+    
+            marker_1963fd2958f427857853994a76b2327a.bindTooltip(
+                `<div>
+                     좋은날(보리밥) (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1963fd2958f427857853994a76b2327a.setIcon(div_icon_fee3089ef94266b1ace83ef9c7a5f1b0);
+            
+    
+            var marker_ac7a2b66bfc8464c74100ff5c7dc2203 = L.marker(
+                [36.4009645353743, 127.396005156452],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_0a636da7ca1226664427a8d922d0fab9 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc138\ubaa8\uc2dc\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_ad7bbb1a7c26dd5714f10cafe317466b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_22b0e25085ee09d501c8ede0afe3ff3a = $(`<div id="html_22b0e25085ee09d501c8ede0afe3ff3a" style="width: 100.0%; height: 100.0%;"><b>세모시</b><br>대전 유성구 유성대로1679번길 28<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/세모시' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_ad7bbb1a7c26dd5714f10cafe317466b.setContent(html_22b0e25085ee09d501c8ede0afe3ff3a);
+            
+        
+
+        marker_ac7a2b66bfc8464c74100ff5c7dc2203.bindPopup(popup_ad7bbb1a7c26dd5714f10cafe317466b)
+        ;
+
+        
+    
+    
+            marker_ac7a2b66bfc8464c74100ff5c7dc2203.bindTooltip(
+                `<div>
+                     세모시 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ac7a2b66bfc8464c74100ff5c7dc2203.setIcon(div_icon_0a636da7ca1226664427a8d922d0fab9);
+            
+    
+            var marker_63c9949d1bd6fc3d7eb5322860d247a1 = L.marker(
+                [36.399948908841, 127.39771715187],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_802b97eb40253cc240379b1213097046 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc218\uc804\ubcf5\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_74681ed852696a446b618c3e5503af69 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f16d8f30dc09b1b93b5f0771b692759a = $(`<div id="html_f16d8f30dc09b1b93b5f0771b692759a" style="width: 100.0%; height: 100.0%;"><b>수전복</b><br>대전 유성구 유성대로1689번길 8-14<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/수전복' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_74681ed852696a446b618c3e5503af69.setContent(html_f16d8f30dc09b1b93b5f0771b692759a);
+            
+        
+
+        marker_63c9949d1bd6fc3d7eb5322860d247a1.bindPopup(popup_74681ed852696a446b618c3e5503af69)
+        ;
+
+        
+    
+    
+            marker_63c9949d1bd6fc3d7eb5322860d247a1.bindTooltip(
+                `<div>
+                     수전복 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_63c9949d1bd6fc3d7eb5322860d247a1.setIcon(div_icon_802b97eb40253cc240379b1213097046);
+            
+    
+            var marker_740c98f261648281993e9f95ec209f94 = L.marker(
+                [36.4001634581359, 127.39402520654966],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_8bda537252ce649d800b09ea68e67775 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc6b0\ub9ac\uba54\ubc00\ucd0c\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_af73f8fab2348b46c2bbc460ed17e1d2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_131c12b18cccacabe575ea2f2387a540 = $(`<div id="html_131c12b18cccacabe575ea2f2387a540" style="width: 100.0%; height: 100.0%;"><b>우리메밀촌</b><br>대전 유성구 유성대로 1661-1<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/우리메밀촌' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_af73f8fab2348b46c2bbc460ed17e1d2.setContent(html_131c12b18cccacabe575ea2f2387a540);
+            
+        
+
+        marker_740c98f261648281993e9f95ec209f94.bindPopup(popup_af73f8fab2348b46c2bbc460ed17e1d2)
+        ;
+
+        
+    
+    
+            marker_740c98f261648281993e9f95ec209f94.bindTooltip(
+                `<div>
+                     우리메밀촌 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_740c98f261648281993e9f95ec209f94.setIcon(div_icon_8bda537252ce649d800b09ea68e67775);
+            
+    
+            var marker_0b580c86daf9c9315988deab3e7257e3 = L.marker(
+                [36.4000364039243, 127.394568002462],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_9662189bcf3c559faf437f72bffcd949 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud5a5\ubbf8\ub77d\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_ec7e12b9b8b5b8d4c029fcca676d2ae5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d56a19b5d78cfed05b899f33a848027d = $(`<div id="html_d56a19b5d78cfed05b899f33a848027d" style="width: 100.0%; height: 100.0%;"><b>향미락</b><br>대전 유성구 유성대로1665번길 8-2<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/향미락' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_ec7e12b9b8b5b8d4c029fcca676d2ae5.setContent(html_d56a19b5d78cfed05b899f33a848027d);
+            
+        
+
+        marker_0b580c86daf9c9315988deab3e7257e3.bindPopup(popup_ec7e12b9b8b5b8d4c029fcca676d2ae5)
+        ;
+
+        
+    
+    
+            marker_0b580c86daf9c9315988deab3e7257e3.bindTooltip(
+                `<div>
+                     향미락 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0b580c86daf9c9315988deab3e7257e3.setIcon(div_icon_9662189bcf3c559faf437f72bffcd949);
+            
+    
+            var marker_6305359c1f96c33df18c0d6696faa261 = L.marker(
+                [36.3977360594668, 127.35539612766],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_e3034efe02443889d945c37f6eeecff3 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ubcf5\uc5b4\ucc2c\uac00\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_34e1e8741c0c8b41da313c4593f3130c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cd8dac22766374d280faa5a1ad4d925b = $(`<div id="html_cd8dac22766374d280faa5a1ad4d925b" style="width: 100.0%; height: 100.0%;"><b>복어찬가</b><br>대전 유성구 유성대로 1233<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/복어찬가' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_34e1e8741c0c8b41da313c4593f3130c.setContent(html_cd8dac22766374d280faa5a1ad4d925b);
+            
+        
+
+        marker_6305359c1f96c33df18c0d6696faa261.bindPopup(popup_34e1e8741c0c8b41da313c4593f3130c)
+        ;
+
+        
+    
+    
+            marker_6305359c1f96c33df18c0d6696faa261.bindTooltip(
+                `<div>
+                     복어찬가 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6305359c1f96c33df18c0d6696faa261.setIcon(div_icon_e3034efe02443889d945c37f6eeecff3);
+            
+    
+            var marker_f55bd54724556f734e75d00984a13b9a = L.marker(
+                [36.3969938574433, 127.402782895824],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_83fb459232f3892d59cfb2bd75891665 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ub9cc\ud654\uc254\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_a812ab689fd98b4330de92002ee45b1c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_bf3a81f79bddcf0f1f664c60685a16fb = $(`<div id="html_bf3a81f79bddcf0f1f664c60685a16fb" style="width: 100.0%; height: 100.0%;"><b>만화쉔</b><br>대전 유성구 전민로22번길 14<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/만화쉔' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_a812ab689fd98b4330de92002ee45b1c.setContent(html_bf3a81f79bddcf0f1f664c60685a16fb);
+            
+        
+
+        marker_f55bd54724556f734e75d00984a13b9a.bindPopup(popup_a812ab689fd98b4330de92002ee45b1c)
+        ;
+
+        
+    
+    
+            marker_f55bd54724556f734e75d00984a13b9a.bindTooltip(
+                `<div>
+                     만화쉔 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f55bd54724556f734e75d00984a13b9a.setIcon(div_icon_83fb459232f3892d59cfb2bd75891665);
+            
+    
+            var marker_af5e9a23be46187c7ae79a698c430208 = L.marker(
+                [36.3980431888101, 127.403393377341],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_abdd865540f8248ef494a8509065dd36 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc758\ub839\uc18c\ubc14\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_d5f7e3f645115ff546985db553b8af8d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6c17ce6470bed1cadddc49e91eeab9c1 = $(`<div id="html_6c17ce6470bed1cadddc49e91eeab9c1" style="width: 100.0%; height: 100.0%;"><b>의령소바</b><br>대전 유성구 전민로14번길 29<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/의령소바' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_d5f7e3f645115ff546985db553b8af8d.setContent(html_6c17ce6470bed1cadddc49e91eeab9c1);
+            
+        
+
+        marker_af5e9a23be46187c7ae79a698c430208.bindPopup(popup_d5f7e3f645115ff546985db553b8af8d)
+        ;
+
+        
+    
+    
+            marker_af5e9a23be46187c7ae79a698c430208.bindTooltip(
+                `<div>
+                     의령소바 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_af5e9a23be46187c7ae79a698c430208.setIcon(div_icon_abdd865540f8248ef494a8509065dd36);
+            
+    
+            var marker_51da742ace1b32a3d43e3515bc22f20f = L.marker(
+                [36.3956227040868, 127.407176242304],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_f141df6479face2b24b29f823cbb59ee = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc18c\ubc14\uacf5\ubc29\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_4aa0044d55532f1826f3cb8556ba31e5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e4909812ebfcab54ea273e0bfa3f4777 = $(`<div id="html_e4909812ebfcab54ea273e0bfa3f4777" style="width: 100.0%; height: 100.0%;"><b>소바공방</b><br>대전 유성구 엑스포로446번길 36<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/소바공방' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_4aa0044d55532f1826f3cb8556ba31e5.setContent(html_e4909812ebfcab54ea273e0bfa3f4777);
+            
+        
+
+        marker_51da742ace1b32a3d43e3515bc22f20f.bindPopup(popup_4aa0044d55532f1826f3cb8556ba31e5)
+        ;
+
+        
+    
+    
+            marker_51da742ace1b32a3d43e3515bc22f20f.bindTooltip(
+                `<div>
+                     소바공방 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_51da742ace1b32a3d43e3515bc22f20f.setIcon(div_icon_f141df6479face2b24b29f823cbb59ee);
+            
+    
+            var marker_c53a60d404d23ca9d59b01069aa66040 = L.marker(
+                [36.3945144647502, 127.405794520951],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_b3df0449eeba37fdc67d48077c020668 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud1a4\uc988\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_640b0a77809b57e016db50c47a084f85 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_80840591d4c4a68abb98fc5d9415fe7a = $(`<div id="html_80840591d4c4a68abb98fc5d9415fe7a" style="width: 100.0%; height: 100.0%;"><b>톤즈</b><br>대전 유성구 문지로 311-19<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/톤즈' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_640b0a77809b57e016db50c47a084f85.setContent(html_80840591d4c4a68abb98fc5d9415fe7a);
+            
+        
+
+        marker_c53a60d404d23ca9d59b01069aa66040.bindPopup(popup_640b0a77809b57e016db50c47a084f85)
+        ;
+
+        
+    
+    
+            marker_c53a60d404d23ca9d59b01069aa66040.bindTooltip(
+                `<div>
+                     톤즈 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c53a60d404d23ca9d59b01069aa66040.setIcon(div_icon_b3df0449eeba37fdc67d48077c020668);
+            
+    
+            var marker_da04abb5d3ccda3289a0396d52278a3e = L.marker(
+                [36.3927988510412, 127.40668678954],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_e51196981099c41250021a9db35bdc81 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc624\uc1a5\uae38\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_488cb7476edff294cdaa2161013fcb36 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4ca2b7239177b50b4d474cc3eb7f0181 = $(`<div id="html_4ca2b7239177b50b4d474cc3eb7f0181" style="width: 100.0%; height: 100.0%;"><b>오솥길</b><br>대전 유성구 문지로 291<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/오솥길' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_488cb7476edff294cdaa2161013fcb36.setContent(html_4ca2b7239177b50b4d474cc3eb7f0181);
+            
+        
+
+        marker_da04abb5d3ccda3289a0396d52278a3e.bindPopup(popup_488cb7476edff294cdaa2161013fcb36)
+        ;
+
+        
+    
+    
+            marker_da04abb5d3ccda3289a0396d52278a3e.bindTooltip(
+                `<div>
+                     오솥길 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_da04abb5d3ccda3289a0396d52278a3e.setIcon(div_icon_e51196981099c41250021a9db35bdc81);
+            
+    
+            var marker_b00a34c4e06e95d788b7453744bd6f48 = L.marker(
+                [36.4016775757339, 127.397783705611],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_4b981ec9af297c54403d7298d4adb95d = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc61b\uacf0\uad6d\uc2dc\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_5e9c650a9b25ce9785383439581b0c74 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2f155694575188173f6f1d6d787cae70 = $(`<div id="html_2f155694575188173f6f1d6d787cae70" style="width: 100.0%; height: 100.0%;"><b>옛곰국시</b><br>대전 유성구 유성대로1707번길 61-3<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/옛곰국시' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_5e9c650a9b25ce9785383439581b0c74.setContent(html_2f155694575188173f6f1d6d787cae70);
+            
+        
+
+        marker_b00a34c4e06e95d788b7453744bd6f48.bindPopup(popup_5e9c650a9b25ce9785383439581b0c74)
+        ;
+
+        
+    
+    
+            marker_b00a34c4e06e95d788b7453744bd6f48.bindTooltip(
+                `<div>
+                     옛곰국시 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b00a34c4e06e95d788b7453744bd6f48.setIcon(div_icon_4b981ec9af297c54403d7298d4adb95d);
+            
+    
+            var marker_700442ccd73f0f419344f18fa5b3fd96 = L.marker(
+                [36.3991628775753, 127.403743392658],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_4e9968d472a1e1e70a130fe4f04db3a9 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uacf5\uc8fc\uce7c\uad6d\uc218\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_ad3406f5e7caa0788a9a5b821d0a9ddf = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2f7d75159cd046f14c321888e050b0d2 = $(`<div id="html_2f7d75159cd046f14c321888e050b0d2" style="width: 100.0%; height: 100.0%;"><b>공주칼국수</b><br>대전 유성구 전민로6번길 67<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/공주칼국수' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_ad3406f5e7caa0788a9a5b821d0a9ddf.setContent(html_2f7d75159cd046f14c321888e050b0d2);
+            
+        
+
+        marker_700442ccd73f0f419344f18fa5b3fd96.bindPopup(popup_ad3406f5e7caa0788a9a5b821d0a9ddf)
+        ;
+
+        
+    
+    
+            marker_700442ccd73f0f419344f18fa5b3fd96.bindTooltip(
+                `<div>
+                     공주칼국수 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_700442ccd73f0f419344f18fa5b3fd96.setIcon(div_icon_4e9968d472a1e1e70a130fe4f04db3a9);
+            
+    
+            var marker_2a0b38ea1ed5fad7727fcbb5f7935483 = L.marker(
+                [36.3942211337552, 127.406351440735],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_d29c17b3ce02a7b84bb7882432b9ed9b = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ubcf5\uc131\uc6d0\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_951dc5ceaeed03e457cf408f814ffd81 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_409e3dfbdbbf5c36c17ea3a8d9f8b01f = $(`<div id="html_409e3dfbdbbf5c36c17ea3a8d9f8b01f" style="width: 100.0%; height: 100.0%;"><b>복성원</b><br>대전 유성구 문지로299번길 120<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/복성원' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_951dc5ceaeed03e457cf408f814ffd81.setContent(html_409e3dfbdbbf5c36c17ea3a8d9f8b01f);
+            
+        
+
+        marker_2a0b38ea1ed5fad7727fcbb5f7935483.bindPopup(popup_951dc5ceaeed03e457cf408f814ffd81)
+        ;
+
+        
+    
+    
+            marker_2a0b38ea1ed5fad7727fcbb5f7935483.bindTooltip(
+                `<div>
+                     복성원 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2a0b38ea1ed5fad7727fcbb5f7935483.setIcon(div_icon_d29c17b3ce02a7b84bb7882432b9ed9b);
+            
+    
+            var marker_616903c79c564a856565201697198433 = L.marker(
+                [36.3942185855785, 127.406173304862],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_df00bd1dea64afefcf00445326d1c3ef = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc5c9\ud074\ubd80\ub300\ucc0c\uac1c\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_8a4651b737ac8e0c964c108c3e978320 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_601de7f4eda83a732a074f895cc37b9b = $(`<div id="html_601de7f4eda83a732a074f895cc37b9b" style="width: 100.0%; height: 100.0%;"><b>엉클부대찌개</b><br>대전 유성구 문지로299번길 118<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/엉클부대찌개' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_8a4651b737ac8e0c964c108c3e978320.setContent(html_601de7f4eda83a732a074f895cc37b9b);
+            
+        
+
+        marker_616903c79c564a856565201697198433.bindPopup(popup_8a4651b737ac8e0c964c108c3e978320)
+        ;
+
+        
+    
+    
+            marker_616903c79c564a856565201697198433.bindTooltip(
+                `<div>
+                     엉클부대찌개 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_616903c79c564a856565201697198433.setIcon(div_icon_df00bd1dea64afefcf00445326d1c3ef);
+            
+    
+            var marker_021867abf5bd2e15e9f1942d8ffb0b43 = L.marker(
+                [36.3975247427121, 127.402780618976],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_ed3b376e539ea0511efcb840c557b7d8 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud55c\uc218\uc2dd\ud0c1\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_874f511db29792772ded90e2ca9ada70 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9a0a19e76d9d32deaf1d454a35969830 = $(`<div id="html_9a0a19e76d9d32deaf1d454a35969830" style="width: 100.0%; height: 100.0%;"><b>한수식탁</b><br>대전 유성구 전민로22번길 26<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/한수식탁' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_874f511db29792772ded90e2ca9ada70.setContent(html_9a0a19e76d9d32deaf1d454a35969830);
+            
+        
+
+        marker_021867abf5bd2e15e9f1942d8ffb0b43.bindPopup(popup_874f511db29792772ded90e2ca9ada70)
+        ;
+
+        
+    
+    
+            marker_021867abf5bd2e15e9f1942d8ffb0b43.bindTooltip(
+                `<div>
+                     한수식탁 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_021867abf5bd2e15e9f1942d8ffb0b43.setIcon(div_icon_ed3b376e539ea0511efcb840c557b7d8);
+            
+    
+            var marker_bfef10ebcebef94e21aad0e017964fd7 = L.marker(
+                [36.3970978668845, 127.402484469719],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_b8aac39110e961efad638323560e1206 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ubd09\uc2dc\ubcf4\uc308\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_e4679a11305034dfd462a39f89935f91 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ef1eabdb33d94aef264f5ac53918db70 = $(`<div id="html_ef1eabdb33d94aef264f5ac53918db70" style="width: 100.0%; height: 100.0%;"><b>봉시보쌈</b><br>대전 유성구 전민로22번길 15<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/봉시보쌈' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_e4679a11305034dfd462a39f89935f91.setContent(html_ef1eabdb33d94aef264f5ac53918db70);
+            
+        
+
+        marker_bfef10ebcebef94e21aad0e017964fd7.bindPopup(popup_e4679a11305034dfd462a39f89935f91)
+        ;
+
+        
+    
+    
+            marker_bfef10ebcebef94e21aad0e017964fd7.bindTooltip(
+                `<div>
+                     봉시보쌈 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bfef10ebcebef94e21aad0e017964fd7.setIcon(div_icon_b8aac39110e961efad638323560e1206);
+            
+    
+            var marker_224ff2fb655e3c1d566078d3c12810f3 = L.marker(
+                [36.3937601334553, 127.406155091594],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_1053631defcf5dbd233c6f8ecdbe94ef = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ub2e4\uc774\ub2dd\uc720\uc6d0\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_aeae7dc3d07655adcb908f1522ce0fde = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_343c06d9e9b66b7ff54f445012888bd0 = $(`<div id="html_343c06d9e9b66b7ff54f445012888bd0" style="width: 100.0%; height: 100.0%;"><b>다이닝유원</b><br>대전 유성구 문지로299번길 86-11<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/다이닝유원' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_aeae7dc3d07655adcb908f1522ce0fde.setContent(html_343c06d9e9b66b7ff54f445012888bd0);
+            
+        
+
+        marker_224ff2fb655e3c1d566078d3c12810f3.bindPopup(popup_aeae7dc3d07655adcb908f1522ce0fde)
+        ;
+
+        
+    
+    
+            marker_224ff2fb655e3c1d566078d3c12810f3.bindTooltip(
+                `<div>
+                     다이닝유원 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_224ff2fb655e3c1d566078d3c12810f3.setIcon(div_icon_1053631defcf5dbd233c6f8ecdbe94ef);
+            
+    
+            var marker_5ca8e9f8210e784986ccbdd6bcb6f40d = L.marker(
+                [36.3934083593804, 127.405798134644],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_c73444b9bc64e5e08ca45112d557ac78 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ubc18\ud0c0\uc774\uc18c\uc77454\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_80858c80d2b3bec0bf5b3deb6d664ea3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_934113a34b7b008df233da93510c1577 = $(`<div id="html_934113a34b7b008df233da93510c1577" style="width: 100.0%; height: 100.0%;"><b>반타이소이54</b><br>대전 유성구 문지로299번길 86-10<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/반타이소이54' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_80858c80d2b3bec0bf5b3deb6d664ea3.setContent(html_934113a34b7b008df233da93510c1577);
+            
+        
+
+        marker_5ca8e9f8210e784986ccbdd6bcb6f40d.bindPopup(popup_80858c80d2b3bec0bf5b3deb6d664ea3)
+        ;
+
+        
+    
+    
+            marker_5ca8e9f8210e784986ccbdd6bcb6f40d.bindTooltip(
+                `<div>
+                     반타이소이54 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5ca8e9f8210e784986ccbdd6bcb6f40d.setIcon(div_icon_c73444b9bc64e5e08ca45112d557ac78);
+            
+    
+            var marker_55fcbd93c8c9f19e207e0ee3d3e07624 = L.marker(
+                [36.3933837297718, 127.405540968855],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_552d25544c769e58a02d2f92d8145aa8 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc81c\uba74\uc18c\uc758\ud558\ub8e8\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_8071fc52e18a81fe169c310a203a9b6d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7c0aab4672acec0b062579888766547f = $(`<div id="html_7c0aab4672acec0b062579888766547f" style="width: 100.0%; height: 100.0%;"><b>제면소의하루</b><br>대전 유성구 문지로299번길 86-4<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/제면소의하루' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_8071fc52e18a81fe169c310a203a9b6d.setContent(html_7c0aab4672acec0b062579888766547f);
+            
+        
+
+        marker_55fcbd93c8c9f19e207e0ee3d3e07624.bindPopup(popup_8071fc52e18a81fe169c310a203a9b6d)
+        ;
+
+        
+    
+    
+            marker_55fcbd93c8c9f19e207e0ee3d3e07624.bindTooltip(
+                `<div>
+                     제면소의하루 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_55fcbd93c8c9f19e207e0ee3d3e07624.setIcon(div_icon_552d25544c769e58a02d2f92d8145aa8);
+            
+    
+            var marker_ae0f561f409e105a5232b87a79bcc6d4 = L.marker(
+                [36.3933837297718, 127.405540968855],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_4c63658139914894c3238345fc40c7b8 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc625\ub41c\uc7a5\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_175c05a2151b4bee0691a8fda3abbd2a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e642609d8588c3011bf8976ee438966a = $(`<div id="html_e642609d8588c3011bf8976ee438966a" style="width: 100.0%; height: 100.0%;"><b>옥된장</b><br>대전 유성구 문지로299번길 86-4<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/옥된장' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_175c05a2151b4bee0691a8fda3abbd2a.setContent(html_e642609d8588c3011bf8976ee438966a);
+            
+        
+
+        marker_ae0f561f409e105a5232b87a79bcc6d4.bindPopup(popup_175c05a2151b4bee0691a8fda3abbd2a)
+        ;
+
+        
+    
+    
+            marker_ae0f561f409e105a5232b87a79bcc6d4.bindTooltip(
+                `<div>
+                     옥된장 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ae0f561f409e105a5232b87a79bcc6d4.setIcon(div_icon_4c63658139914894c3238345fc40c7b8);
+            
+    
+            var marker_3337358bd90c36a67a63b4df1fe267d6 = L.marker(
+                [36.3968784132197, 127.402463496588],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_834b423d9d029f8c074d0a134d6a3dbe = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uac15\uc9ec\ubf55\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_58e4d0cafc73dbadc89158425a9bbb15 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e86e14be613b38291e46140d9af376bf = $(`<div id="html_e86e14be613b38291e46140d9af376bf" style="width: 100.0%; height: 100.0%;"><b>강짬뽕</b><br>대전 유성구 전민로46번길 39<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/강짬뽕' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_58e4d0cafc73dbadc89158425a9bbb15.setContent(html_e86e14be613b38291e46140d9af376bf);
+            
+        
+
+        marker_3337358bd90c36a67a63b4df1fe267d6.bindPopup(popup_58e4d0cafc73dbadc89158425a9bbb15)
+        ;
+
+        
+    
+    
+            marker_3337358bd90c36a67a63b4df1fe267d6.bindTooltip(
+                `<div>
+                     강짬뽕 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3337358bd90c36a67a63b4df1fe267d6.setIcon(div_icon_834b423d9d029f8c074d0a134d6a3dbe);
+            
+    
+            var marker_35750a292ee8d889ccb88ad4e8fe4ade = L.marker(
+                [36.3976221659825, 127.404112417864],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_3688b1e809b81639b5e7ca6ef2c77365 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uba74\ud5a5\uac00\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_bafaf6f4f5bf0eaf7a5a3d202f797b6f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_77b7d379769fbddd475cb26e989c9900 = $(`<div id="html_77b7d379769fbddd475cb26e989c9900" style="width: 100.0%; height: 100.0%;"><b>면향가</b><br>대전 유성구 전민로10번길 28<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/면향가' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_bafaf6f4f5bf0eaf7a5a3d202f797b6f.setContent(html_77b7d379769fbddd475cb26e989c9900);
+            
+        
+
+        marker_35750a292ee8d889ccb88ad4e8fe4ade.bindPopup(popup_bafaf6f4f5bf0eaf7a5a3d202f797b6f)
+        ;
+
+        
+    
+    
+            marker_35750a292ee8d889ccb88ad4e8fe4ade.bindTooltip(
+                `<div>
+                     면향가 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_35750a292ee8d889ccb88ad4e8fe4ade.setIcon(div_icon_3688b1e809b81639b5e7ca6ef2c77365);
+            
+    
+            var marker_57071a22d033c601c2abaa5aa6329626 = L.marker(
+                [36.398263687776, 127.400694447952],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_0f7dd52ae9ca561762b6e8d0917ec96e = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc131\ud654\uc9ec\ubf55\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_3d841fdbd5e5fe88b9442c1684cd6a2e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f39af48e3191705ee372e3e66ec3f895 = $(`<div id="html_f39af48e3191705ee372e3e66ec3f895" style="width: 100.0%; height: 100.0%;"><b>성화짬뽕</b><br>대전 유성구 전민로38번길 33<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/성화짬뽕' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_3d841fdbd5e5fe88b9442c1684cd6a2e.setContent(html_f39af48e3191705ee372e3e66ec3f895);
+            
+        
+
+        marker_57071a22d033c601c2abaa5aa6329626.bindPopup(popup_3d841fdbd5e5fe88b9442c1684cd6a2e)
+        ;
+
+        
+    
+    
+            marker_57071a22d033c601c2abaa5aa6329626.bindTooltip(
+                `<div>
+                     성화짬뽕 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_57071a22d033c601c2abaa5aa6329626.setIcon(div_icon_0f7dd52ae9ca561762b6e8d0917ec96e);
+            
+    
+            var marker_b5aa71d5f3116568a3dd06ad28fbd9b7 = L.marker(
+                [36.3950590585856, 127.406584087019],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_59a330f28e6a66d8292098e191100be1 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc2dc\ud654\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_ad8f805643010fcafe169eb56cfa2485 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_961e3121e5a8ca58ee2bba6bcd7c8797 = $(`<div id="html_961e3121e5a8ca58ee2bba6bcd7c8797" style="width: 100.0%; height: 100.0%;"><b>시화</b><br>대전 유성구 문지로315번길 6<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/시화' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_ad8f805643010fcafe169eb56cfa2485.setContent(html_961e3121e5a8ca58ee2bba6bcd7c8797);
+            
+        
+
+        marker_b5aa71d5f3116568a3dd06ad28fbd9b7.bindPopup(popup_ad8f805643010fcafe169eb56cfa2485)
+        ;
+
+        
+    
+    
+            marker_b5aa71d5f3116568a3dd06ad28fbd9b7.bindTooltip(
+                `<div>
+                     시화 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b5aa71d5f3116568a3dd06ad28fbd9b7.setIcon(div_icon_59a330f28e6a66d8292098e191100be1);
+            
+    
+            var marker_9586a517ec7e566373bb6b181fd8850c = L.marker(
+                [36.3942211337552, 127.406351440735],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_f3e60e06884f947fb8859057afbf9435 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ubcf5\uc131\uc6d0\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_6a186671842a22f31a007b0e9837540e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d724ba555e1058afdae661990354f058 = $(`<div id="html_d724ba555e1058afdae661990354f058" style="width: 100.0%; height: 100.0%;"><b>복성원</b><br>대전 유성구 문지로299번길 120<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/복성원' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_6a186671842a22f31a007b0e9837540e.setContent(html_d724ba555e1058afdae661990354f058);
+            
+        
+
+        marker_9586a517ec7e566373bb6b181fd8850c.bindPopup(popup_6a186671842a22f31a007b0e9837540e)
+        ;
+
+        
+    
+    
+            marker_9586a517ec7e566373bb6b181fd8850c.bindTooltip(
+                `<div>
+                     복성원 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9586a517ec7e566373bb6b181fd8850c.setIcon(div_icon_f3e60e06884f947fb8859057afbf9435);
+            
+    
+            var marker_d7de42ab269683a835021458d09b409d = L.marker(
+                [36.3937556238475, 127.405625830868],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_7948511e8493bb386a2329d760a7ad56 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ubaa8\ub358\ucc28\uc774\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_7aabfa249455528461007fe940726955 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9796d17251f0f4d1ac09cc2414fbe2c4 = $(`<div id="html_9796d17251f0f4d1ac09cc2414fbe2c4" style="width: 100.0%; height: 100.0%;"><b>모던차이</b><br>대전 유성구 문지로299번길 86-5<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/모던차이' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_7aabfa249455528461007fe940726955.setContent(html_9796d17251f0f4d1ac09cc2414fbe2c4);
+            
+        
+
+        marker_d7de42ab269683a835021458d09b409d.bindPopup(popup_7aabfa249455528461007fe940726955)
+        ;
+
+        
+    
+    
+            marker_d7de42ab269683a835021458d09b409d.bindTooltip(
+                `<div>
+                     모던차이 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d7de42ab269683a835021458d09b409d.setIcon(div_icon_7948511e8493bb386a2329d760a7ad56);
+            
+    
+            var marker_fadb156e2623f3b4218a33bc7e4becbd = L.marker(
+                [36.3981598326316, 127.403223540062],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_e1e7e7478c586a72401da8db19b1ab65 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ub808\ub4dc\ubb38\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_21420ac03f9585a17fb5c7225476ebd9 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d476f52d0741c1d18d113550b50cd9dc = $(`<div id="html_d476f52d0741c1d18d113550b50cd9dc" style="width: 100.0%; height: 100.0%;"><b>레드문</b><br>대전 유성구 전민로18번길 30<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/레드문' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_21420ac03f9585a17fb5c7225476ebd9.setContent(html_d476f52d0741c1d18d113550b50cd9dc);
+            
+        
+
+        marker_fadb156e2623f3b4218a33bc7e4becbd.bindPopup(popup_21420ac03f9585a17fb5c7225476ebd9)
+        ;
+
+        
+    
+    
+            marker_fadb156e2623f3b4218a33bc7e4becbd.bindTooltip(
+                `<div>
+                     레드문 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fadb156e2623f3b4218a33bc7e4becbd.setIcon(div_icon_e1e7e7478c586a72401da8db19b1ab65);
+            
+    
+            var marker_d69cf331a82a32a9068d20316f30ae65 = L.marker(
+                [36.3974112167975, 127.402774348193],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_295a0fa73dad7b00126ff5941bcb4797 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ucd98\ucc9c\uc9d1\ub2ed\uac08\ube44\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_7654651e74e1a263bf593bc2f6f5495e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_efad16d989bfaaa48f26d0add2648bde = $(`<div id="html_efad16d989bfaaa48f26d0add2648bde" style="width: 100.0%; height: 100.0%;"><b>춘천집닭갈비</b><br>대전 유성구 전민로22번길 24<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/춘천집닭갈비' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_7654651e74e1a263bf593bc2f6f5495e.setContent(html_efad16d989bfaaa48f26d0add2648bde);
+            
+        
+
+        marker_d69cf331a82a32a9068d20316f30ae65.bindPopup(popup_7654651e74e1a263bf593bc2f6f5495e)
+        ;
+
+        
+    
+    
+            marker_d69cf331a82a32a9068d20316f30ae65.bindTooltip(
+                `<div>
+                     춘천집닭갈비 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d69cf331a82a32a9068d20316f30ae65.setIcon(div_icon_295a0fa73dad7b00126ff5941bcb4797);
+            
+    
+            var marker_27499642c59da03f7bdb3bfa0e4f34d1 = L.marker(
+                [36.3968855044512, 127.403833385333],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_1ddf5be17a2aee59646f7b2f737a80b7 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uae40\uce58\ub791\ubd80\ub300\ub791\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_da6be819be1f2c402c13cc1ae9cac7be = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_db4cb83ad5c8527bfcfa34727dc2014a = $(`<div id="html_db4cb83ad5c8527bfcfa34727dc2014a" style="width: 100.0%; height: 100.0%;"><b>김치랑부대랑</b><br>대전 유성구 전민로46번길 61<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/김치랑부대랑' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_da6be819be1f2c402c13cc1ae9cac7be.setContent(html_db4cb83ad5c8527bfcfa34727dc2014a);
+            
+        
+
+        marker_27499642c59da03f7bdb3bfa0e4f34d1.bindPopup(popup_da6be819be1f2c402c13cc1ae9cac7be)
+        ;
+
+        
+    
+    
+            marker_27499642c59da03f7bdb3bfa0e4f34d1.bindTooltip(
+                `<div>
+                     김치랑부대랑 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_27499642c59da03f7bdb3bfa0e4f34d1.setIcon(div_icon_1ddf5be17a2aee59646f7b2f737a80b7);
+            
+    
+            var marker_3c5ebe61108efd754628ec642e77cf86 = L.marker(
+                [36.3982584534848, 127.402492348968],
+                {
+}
+            ).addTo(feature_group_570567ade2a48696bc506a5fc991f4b7);
+        
+    
+            var div_icon_8b43e613744dffbf07f12cf7d7b676d3 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#f57c00;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc624\uac00\ub124\ub300\uad6c\uc655\ubf48\ub5bc\uae30\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_5418ddc4f6cacd237d4217d6afaf3169 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_25c8fab861a19d7f717e34c6571cd7df = $(`<div id="html_25c8fab861a19d7f717e34c6571cd7df" style="width: 100.0%; height: 100.0%;"><b>오가네대구왕뽈떼기</b><br>대전 유성구 전민로22번길 41<br><span style='color:#f57c00'>일반식당</span><br><a href='https://map.kakao.com/link/search/오가네대구왕뽈떼기' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_5418ddc4f6cacd237d4217d6afaf3169.setContent(html_25c8fab861a19d7f717e34c6571cd7df);
+            
+        
+
+        marker_3c5ebe61108efd754628ec642e77cf86.bindPopup(popup_5418ddc4f6cacd237d4217d6afaf3169)
+        ;
+
+        
+    
+    
+            marker_3c5ebe61108efd754628ec642e77cf86.bindTooltip(
+                `<div>
+                     오가네대구왕뽈떼기 (일반식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3c5ebe61108efd754628ec642e77cf86.setIcon(div_icon_8b43e613744dffbf07f12cf7d7b676d3);
+            
+    
+            feature_group_570567ade2a48696bc506a5fc991f4b7.addTo(map_9a51b4064659b9284928dd5496a506ac);
+        
+    
+            var feature_group_d91da8485164f7d7efbd95726bc4e2b8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_b5d1e873cf6ef5a363a50dabc3cfb9f1 = L.marker(
+                [36.3982584534848, 127.402492348968],
+                {
+}
+            ).addTo(feature_group_d91da8485164f7d7efbd95726bc4e2b8);
+        
+    
+            var div_icon_0368acf7d0ddc96167719d2ea52daff8 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#2e7d32;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc624\uac00\ub124\ub300\uad6c\uc655\ubf48\ub5bc\uae30\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_8c8995a0a339e7c93cf64f27e092e2ef = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f514f29077724aced29dafb188d92d08 = $(`<div id="html_f514f29077724aced29dafb188d92d08" style="width: 100.0%; height: 100.0%;"><b>오가네대구왕뽈떼기</b><br>대전 유성구 전민로22번길 41<br><span style='color:#2e7d32'>행사 후 식당</span><br><a href='https://map.kakao.com/link/search/오가네대구왕뽈떼기' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_8c8995a0a339e7c93cf64f27e092e2ef.setContent(html_f514f29077724aced29dafb188d92d08);
+            
+        
+
+        marker_b5d1e873cf6ef5a363a50dabc3cfb9f1.bindPopup(popup_8c8995a0a339e7c93cf64f27e092e2ef)
+        ;
+
+        
+    
+    
+            marker_b5d1e873cf6ef5a363a50dabc3cfb9f1.bindTooltip(
+                `<div>
+                     오가네대구왕뽈떼기 (행사 후 식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b5d1e873cf6ef5a363a50dabc3cfb9f1.setIcon(div_icon_0368acf7d0ddc96167719d2ea52daff8);
+            
+    
+            var marker_fcd4bb4202285f9d460383fc921c9485 = L.marker(
+                [36.397751343686, 127.402766516699],
+                {
+}
+            ).addTo(feature_group_d91da8485164f7d7efbd95726bc4e2b8);
+        
+    
+            var div_icon_fe6dbf5d45bf9459b707410e1d883788 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#2e7d32;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud55c\uc6b0\uacf0\ud0d5\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_ef57f80e68cdde59d7340e492a275b86 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_89d4d60a929ec1c18901d550e4feded1 = $(`<div id="html_89d4d60a929ec1c18901d550e4feded1" style="width: 100.0%; height: 100.0%;"><b>한우곰탕</b><br>대전 유성구 전민로22번길 30<br><span style='color:#2e7d32'>행사 후 식당</span><br><a href='https://map.kakao.com/link/search/한우곰탕' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_ef57f80e68cdde59d7340e492a275b86.setContent(html_89d4d60a929ec1c18901d550e4feded1);
+            
+        
+
+        marker_fcd4bb4202285f9d460383fc921c9485.bindPopup(popup_ef57f80e68cdde59d7340e492a275b86)
+        ;
+
+        
+    
+    
+            marker_fcd4bb4202285f9d460383fc921c9485.bindTooltip(
+                `<div>
+                     한우곰탕 (행사 후 식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fcd4bb4202285f9d460383fc921c9485.setIcon(div_icon_fe6dbf5d45bf9459b707410e1d883788);
+            
+    
+            var marker_eb8d4d65f2db10e9f84024659225560e = L.marker(
+                [36.3991598527437, 127.40113758333],
+                {
+}
+            ).addTo(feature_group_d91da8485164f7d7efbd95726bc4e2b8);
+        
+    
+            var div_icon_4b05857d6e6e7cf51beae37b046e439f = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#2e7d32;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc5b4\ubd80\uc640\ud574\ub140\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_c40fbf1e5662caa6fbb0cfd54f2196e0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_df56af18c659fba4993dfdd15cde7122 = $(`<div id="html_df56af18c659fba4993dfdd15cde7122" style="width: 100.0%; height: 100.0%;"><b>어부와해녀</b><br>대전 유성구 전민로34번길 61<br><span style='color:#2e7d32'>행사 후 식당</span><br><a href='https://map.kakao.com/link/search/어부와해녀' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_c40fbf1e5662caa6fbb0cfd54f2196e0.setContent(html_df56af18c659fba4993dfdd15cde7122);
+            
+        
+
+        marker_eb8d4d65f2db10e9f84024659225560e.bindPopup(popup_c40fbf1e5662caa6fbb0cfd54f2196e0)
+        ;
+
+        
+    
+    
+            marker_eb8d4d65f2db10e9f84024659225560e.bindTooltip(
+                `<div>
+                     어부와해녀 (행사 후 식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eb8d4d65f2db10e9f84024659225560e.setIcon(div_icon_4b05857d6e6e7cf51beae37b046e439f);
+            
+    
+            var marker_611e022f659afd0979c36c28417c27ae = L.marker(
+                [36.3958260426713, 127.407218769091],
+                {
+}
+            ).addTo(feature_group_d91da8485164f7d7efbd95726bc4e2b8);
+        
+    
+            var div_icon_f1c5c52f1ab42dd19dc51ea17fe6deb2 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#2e7d32;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud30c\uc2a4\ud0c0\uc5d0\uc774\uce58\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_a946c3d78e7ffada0f5e0e21dd91e38d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9b692789b13af545f056daf44c7a0d14 = $(`<div id="html_9b692789b13af545f056daf44c7a0d14" style="width: 100.0%; height: 100.0%;"><b>파스타에이치</b><br>대전 유성구 엑스포로446번길 38<br><span style='color:#2e7d32'>행사 후 식당</span><br><a href='https://map.kakao.com/link/search/파스타에이치' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_a946c3d78e7ffada0f5e0e21dd91e38d.setContent(html_9b692789b13af545f056daf44c7a0d14);
+            
+        
+
+        marker_611e022f659afd0979c36c28417c27ae.bindPopup(popup_a946c3d78e7ffada0f5e0e21dd91e38d)
+        ;
+
+        
+    
+    
+            marker_611e022f659afd0979c36c28417c27ae.bindTooltip(
+                `<div>
+                     파스타에이치 (행사 후 식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_611e022f659afd0979c36c28417c27ae.setIcon(div_icon_f1c5c52f1ab42dd19dc51ea17fe6deb2);
+            
+    
+            var marker_2c5fd4a6165294157c6fa29393e4ddd3 = L.marker(
+                [36.3990129884704, 127.401800091906],
+                {
+}
+            ).addTo(feature_group_d91da8485164f7d7efbd95726bc4e2b8);
+        
+    
+            var div_icon_0e95c6e22c49f46fa0770bdc6a66563d = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#2e7d32;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc2a4\uc2dc\uc548\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_06bef89e4bb40940352cfa48aa35da0e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_561965f175fe053acf13629d663455af = $(`<div id="html_561965f175fe053acf13629d663455af" style="width: 100.0%; height: 100.0%;"><b>스시안</b><br>대전 유성구 전민로70번길 27<br><span style='color:#2e7d32'>행사 후 식당</span><br><a href='https://map.kakao.com/link/search/스시안' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_06bef89e4bb40940352cfa48aa35da0e.setContent(html_561965f175fe053acf13629d663455af);
+            
+        
+
+        marker_2c5fd4a6165294157c6fa29393e4ddd3.bindPopup(popup_06bef89e4bb40940352cfa48aa35da0e)
+        ;
+
+        
+    
+    
+            marker_2c5fd4a6165294157c6fa29393e4ddd3.bindTooltip(
+                `<div>
+                     스시안 (행사 후 식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2c5fd4a6165294157c6fa29393e4ddd3.setIcon(div_icon_0e95c6e22c49f46fa0770bdc6a66563d);
+            
+    
+            feature_group_d91da8485164f7d7efbd95726bc4e2b8.addTo(map_9a51b4064659b9284928dd5496a506ac);
+        
+    
+            var feature_group_a55be2b99b81d9e969e8f0d269d24de8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_07c6a9595ae06f1ab84096558bfadb53 = L.marker(
+                [36.3982191208516, 127.402772051571],
+                {
+}
+            ).addTo(feature_group_a55be2b99b81d9e969e8f0d269d24de8);
+        
+    
+            var div_icon_7be25450eb10a89700ff7db54c5d3944 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#1565c0;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ucc9c\ud558\uc0bc\uacb9\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_cefa669d6a793edbf76eeec2f7487615 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5bc0cc5f73db682a58d651c63cb6b94e = $(`<div id="html_5bc0cc5f73db682a58d651c63cb6b94e" style="width: 100.0%; height: 100.0%;"><b>천하삼겹</b><br>대전 유성구 전민로22번길 40<br><span style='color:#1565c0'>저녁회식</span><br><a href='https://map.kakao.com/link/search/천하삼겹' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_cefa669d6a793edbf76eeec2f7487615.setContent(html_5bc0cc5f73db682a58d651c63cb6b94e);
+            
+        
+
+        marker_07c6a9595ae06f1ab84096558bfadb53.bindPopup(popup_cefa669d6a793edbf76eeec2f7487615)
+        ;
+
+        
+    
+    
+            marker_07c6a9595ae06f1ab84096558bfadb53.bindTooltip(
+                `<div>
+                     천하삼겹 (저녁회식)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_07c6a9595ae06f1ab84096558bfadb53.setIcon(div_icon_7be25450eb10a89700ff7db54c5d3944);
+            
+    
+            var marker_44fc4dec9167a50a4223c3792c3ee87f = L.marker(
+                [36.3999425011987, 127.396473178899],
+                {
+}
+            ).addTo(feature_group_a55be2b99b81d9e969e8f0d269d24de8);
+        
+    
+            var div_icon_218d98241c2b3bc600e23778740cecbe = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#1565c0;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc624\ub9ac\uc0ac\ub0e5\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_004679dc3175d1827925ce24a0708731 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_76c61095bcebbe8f4efc0caed8218100 = $(`<div id="html_76c61095bcebbe8f4efc0caed8218100" style="width: 100.0%; height: 100.0%;"><b>오리사냥</b><br>대전 유성구 유성대로1679번길 8-10<br><span style='color:#1565c0'>저녁회식</span><br><a href='https://map.kakao.com/link/search/오리사냥' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_004679dc3175d1827925ce24a0708731.setContent(html_76c61095bcebbe8f4efc0caed8218100);
+            
+        
+
+        marker_44fc4dec9167a50a4223c3792c3ee87f.bindPopup(popup_004679dc3175d1827925ce24a0708731)
+        ;
+
+        
+    
+    
+            marker_44fc4dec9167a50a4223c3792c3ee87f.bindTooltip(
+                `<div>
+                     오리사냥 (저녁회식)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_44fc4dec9167a50a4223c3792c3ee87f.setIcon(div_icon_218d98241c2b3bc600e23778740cecbe);
+            
+    
+            var marker_afc0856cbc9a9d38531c1986d4eb3117 = L.marker(
+                [36.3988145687895, 127.402971873137],
+                {
+}
+            ).addTo(feature_group_a55be2b99b81d9e969e8f0d269d24de8);
+        
+    
+            var div_icon_c2328398f2aba87a6bd848a2412068c1 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#1565c0;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ub300\uac10\ub9c9\ucc3d\uac08\ub9e4\uae30\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_27cba663992da2b0930c875d5276fb3d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c835f21d3df7c6d59190aa556857020b = $(`<div id="html_c835f21d3df7c6d59190aa556857020b" style="width: 100.0%; height: 100.0%;"><b>대감막창갈매기</b><br>대전 유성구 전민로70번길 48<br><span style='color:#1565c0'>저녁회식</span><br><a href='https://map.kakao.com/link/search/대감막창갈매기' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_27cba663992da2b0930c875d5276fb3d.setContent(html_c835f21d3df7c6d59190aa556857020b);
+            
+        
+
+        marker_afc0856cbc9a9d38531c1986d4eb3117.bindPopup(popup_27cba663992da2b0930c875d5276fb3d)
+        ;
+
+        
+    
+    
+            marker_afc0856cbc9a9d38531c1986d4eb3117.bindTooltip(
+                `<div>
+                     대감막창갈매기 (저녁회식)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_afc0856cbc9a9d38531c1986d4eb3117.setIcon(div_icon_c2328398f2aba87a6bd848a2412068c1);
+            
+    
+            var marker_3d04e32147054f3d9fc8e45a6530991d = L.marker(
+                [36.398683108977, 127.403232820071],
+                {
+}
+            ).addTo(feature_group_a55be2b99b81d9e969e8f0d269d24de8);
+        
+    
+            var div_icon_1bee0f397d4dda7b56b93ef3311dd5ee = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#1565c0;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uce60\uc131\uac08\ube44\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_5a0f1ed3b68a68eee29fce7391e0effb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f45809cb0c11075f0a3a703407fbbfb5 = $(`<div id="html_f45809cb0c11075f0a3a703407fbbfb5" style="width: 100.0%; height: 100.0%;"><b>칠성갈비</b><br>대전 유성구 전민로18번길 42<br><span style='color:#1565c0'>저녁회식</span><br><a href='https://map.kakao.com/link/search/칠성갈비' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_5a0f1ed3b68a68eee29fce7391e0effb.setContent(html_f45809cb0c11075f0a3a703407fbbfb5);
+            
+        
+
+        marker_3d04e32147054f3d9fc8e45a6530991d.bindPopup(popup_5a0f1ed3b68a68eee29fce7391e0effb)
+        ;
+
+        
+    
+    
+            marker_3d04e32147054f3d9fc8e45a6530991d.bindTooltip(
+                `<div>
+                     칠성갈비 (저녁회식)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3d04e32147054f3d9fc8e45a6530991d.setIcon(div_icon_1bee0f397d4dda7b56b93ef3311dd5ee);
+            
+    
+            var marker_f6c8e6d26fb1524501c77823497afbcc = L.marker(
+                [36.398683108977, 127.403232820071],
+                {
+}
+            ).addTo(feature_group_a55be2b99b81d9e969e8f0d269d24de8);
+        
+    
+            var div_icon_b74e8a4ffad89ed4dd99f3e5de32392d = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#1565c0;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc18d\ucd08\uc138\uaf2c\uc2dc\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_1ea6ba406e682966063f2d980848eb45 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b007f006081d8743942abf8e39068b30 = $(`<div id="html_b007f006081d8743942abf8e39068b30" style="width: 100.0%; height: 100.0%;"><b>속초세꼬시</b><br>대전 유성구 전민로18번길 42<br><span style='color:#1565c0'>저녁회식</span><br><a href='https://map.kakao.com/link/search/속초세꼬시' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_1ea6ba406e682966063f2d980848eb45.setContent(html_b007f006081d8743942abf8e39068b30);
+            
+        
+
+        marker_f6c8e6d26fb1524501c77823497afbcc.bindPopup(popup_1ea6ba406e682966063f2d980848eb45)
+        ;
+
+        
+    
+    
+            marker_f6c8e6d26fb1524501c77823497afbcc.bindTooltip(
+                `<div>
+                     속초세꼬시 (저녁회식)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f6c8e6d26fb1524501c77823497afbcc.setIcon(div_icon_b74e8a4ffad89ed4dd99f3e5de32392d);
+            
+    
+            var marker_9f6167b35d7be789ad1fa9a4843f3a0e = L.marker(
+                [36.3988038374135, 127.403401209898],
+                {
+}
+            ).addTo(feature_group_a55be2b99b81d9e969e8f0d269d24de8);
+        
+    
+            var div_icon_9bbccbae75391b85f3fa98d510f90b1f = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#1565c0;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud558\ub0a8\ub3fc\uc9c0\uc9d1\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_769b3e8c404248a9b6fb7df820b5894c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e4056024dc09e89b40e31c75da963512 = $(`<div id="html_e4056024dc09e89b40e31c75da963512" style="width: 100.0%; height: 100.0%;"><b>하남돼지집</b><br>대전 유성구 전민로14번길 45<br><span style='color:#1565c0'>저녁회식</span><br><a href='https://map.kakao.com/link/search/하남돼지집' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_769b3e8c404248a9b6fb7df820b5894c.setContent(html_e4056024dc09e89b40e31c75da963512);
+            
+        
+
+        marker_9f6167b35d7be789ad1fa9a4843f3a0e.bindPopup(popup_769b3e8c404248a9b6fb7df820b5894c)
+        ;
+
+        
+    
+    
+            marker_9f6167b35d7be789ad1fa9a4843f3a0e.bindTooltip(
+                `<div>
+                     하남돼지집 (저녁회식)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9f6167b35d7be789ad1fa9a4843f3a0e.setIcon(div_icon_9bbccbae75391b85f3fa98d510f90b1f);
+            
+    
+            var marker_d6017d3761c0b77ec6e1ef788ce2792b = L.marker(
+                [36.3991622233145, 127.40137079712],
+                {
+}
+            ).addTo(feature_group_a55be2b99b81d9e969e8f0d269d24de8);
+        
+    
+            var div_icon_d071ec0261ef433a5319a62b2abe9277 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#1565c0;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud53c\uadf8\ub3c8\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_131754e36aa3f583b0479ec9e03a439a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d06e2b44160de36c40a429fe649ac90b = $(`<div id="html_d06e2b44160de36c40a429fe649ac90b" style="width: 100.0%; height: 100.0%;"><b>피그돈</b><br>대전 유성구 전민로34번길 62<br><span style='color:#1565c0'>저녁회식</span><br><a href='https://map.kakao.com/link/search/피그돈' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_131754e36aa3f583b0479ec9e03a439a.setContent(html_d06e2b44160de36c40a429fe649ac90b);
+            
+        
+
+        marker_d6017d3761c0b77ec6e1ef788ce2792b.bindPopup(popup_131754e36aa3f583b0479ec9e03a439a)
+        ;
+
+        
+    
+    
+            marker_d6017d3761c0b77ec6e1ef788ce2792b.bindTooltip(
+                `<div>
+                     피그돈 (저녁회식)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d6017d3761c0b77ec6e1ef788ce2792b.setIcon(div_icon_d071ec0261ef433a5319a62b2abe9277);
+            
+    
+            var marker_c98d6a6a2f201b3cb779ac487053d6f4 = L.marker(
+                [36.3991645338524, 127.402210869869],
+                {
+}
+            ).addTo(feature_group_a55be2b99b81d9e969e8f0d269d24de8);
+        
+    
+            var div_icon_99ce42d6bb902f29a6e31b183c11b6a0 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#1565c0;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud0c4\ud654\uc815\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_1f2d3c306bfb3cf98b0cfcd138a0feeb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8b7cb08e3c2f3cf5338957b550d395f8 = $(`<div id="html_8b7cb08e3c2f3cf5338957b550d395f8" style="width: 100.0%; height: 100.0%;"><b>탄화정</b><br>대전 유성구 전민로6번길 93<br><span style='color:#1565c0'>저녁회식</span><br><a href='https://map.kakao.com/link/search/탄화정' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_1f2d3c306bfb3cf98b0cfcd138a0feeb.setContent(html_8b7cb08e3c2f3cf5338957b550d395f8);
+            
+        
+
+        marker_c98d6a6a2f201b3cb779ac487053d6f4.bindPopup(popup_1f2d3c306bfb3cf98b0cfcd138a0feeb)
+        ;
+
+        
+    
+    
+            marker_c98d6a6a2f201b3cb779ac487053d6f4.bindTooltip(
+                `<div>
+                     탄화정 (저녁회식)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c98d6a6a2f201b3cb779ac487053d6f4.setIcon(div_icon_99ce42d6bb902f29a6e31b183c11b6a0);
+            
+    
+            var marker_b7a9b4605d9006771f94889f2bf5baf2 = L.marker(
+                [36.3986828706451, 127.402475252731],
+                {
+}
+            ).addTo(feature_group_a55be2b99b81d9e969e8f0d269d24de8);
+        
+    
+            var div_icon_306fdab00556ab49c7f26c3dae9c3699 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#1565c0;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uad11\uc138\uc871\ubc1c\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_2c48f8a27a4d37e6bd2cf06d2beed4ca = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8466e36875bf9ce8918016ee9e9cbc4d = $(`<div id="html_8466e36875bf9ce8918016ee9e9cbc4d" style="width: 100.0%; height: 100.0%;"><b>광세족발</b><br>대전 유성구 전민로22번길 51<br><span style='color:#1565c0'>저녁회식</span><br><a href='https://map.kakao.com/link/search/광세족발' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_2c48f8a27a4d37e6bd2cf06d2beed4ca.setContent(html_8466e36875bf9ce8918016ee9e9cbc4d);
+            
+        
+
+        marker_b7a9b4605d9006771f94889f2bf5baf2.bindPopup(popup_2c48f8a27a4d37e6bd2cf06d2beed4ca)
+        ;
+
+        
+    
+    
+            marker_b7a9b4605d9006771f94889f2bf5baf2.bindTooltip(
+                `<div>
+                     광세족발 (저녁회식)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b7a9b4605d9006771f94889f2bf5baf2.setIcon(div_icon_306fdab00556ab49c7f26c3dae9c3699);
+            
+    
+            var marker_1d59d5599edb25b16f2f7eb34062bf28 = L.marker(
+                [36.3986899882085, 127.402769799416],
+                {
+}
+            ).addTo(feature_group_a55be2b99b81d9e969e8f0d269d24de8);
+        
+    
+            var div_icon_6150e5ab13d191698e60cd67c1a35672 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#1565c0;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ub3d9\uc74d\ub9ac\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_02bcf7d3b6efac41580f536c25d22aba = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9f88f34686abd6223d07928c80913c7a = $(`<div id="html_9f88f34686abd6223d07928c80913c7a" style="width: 100.0%; height: 100.0%;"><b>동읍리</b><br>대전 유성구 전민로22번길 52<br><span style='color:#1565c0'>저녁회식</span><br><a href='https://map.kakao.com/link/search/동읍리' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_02bcf7d3b6efac41580f536c25d22aba.setContent(html_9f88f34686abd6223d07928c80913c7a);
+            
+        
+
+        marker_1d59d5599edb25b16f2f7eb34062bf28.bindPopup(popup_02bcf7d3b6efac41580f536c25d22aba)
+        ;
+
+        
+    
+    
+            marker_1d59d5599edb25b16f2f7eb34062bf28.bindTooltip(
+                `<div>
+                     동읍리 (저녁회식)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1d59d5599edb25b16f2f7eb34062bf28.setIcon(div_icon_6150e5ab13d191698e60cd67c1a35672);
+            
+    
+            var marker_2eaf05e36dc0682df6f42f19adfb900e = L.marker(
+                [36.3988157154471, 127.401400339114],
+                {
+}
+            ).addTo(feature_group_a55be2b99b81d9e969e8f0d269d24de8);
+        
+    
+            var div_icon_2aaa750c4519ad4986597a5e5b2bd1fc = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#1565c0;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud48d\uc6b4\uc591\uaf2c\uce58\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_03d6cda3061399f444d966618d869f9b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_53955a56b9ef8df1d08f089c4972656b = $(`<div id="html_53955a56b9ef8df1d08f089c4972656b" style="width: 100.0%; height: 100.0%;"><b>풍운양꼬치</b><br>대전 유성구 전민로34번길 54<br><span style='color:#1565c0'>저녁회식</span><br><a href='https://map.kakao.com/link/search/풍운양꼬치' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_03d6cda3061399f444d966618d869f9b.setContent(html_53955a56b9ef8df1d08f089c4972656b);
+            
+        
+
+        marker_2eaf05e36dc0682df6f42f19adfb900e.bindPopup(popup_03d6cda3061399f444d966618d869f9b)
+        ;
+
+        
+    
+    
+            marker_2eaf05e36dc0682df6f42f19adfb900e.bindTooltip(
+                `<div>
+                     풍운양꼬치 (저녁회식)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2eaf05e36dc0682df6f42f19adfb900e.setIcon(div_icon_2aaa750c4519ad4986597a5e5b2bd1fc);
+            
+    
+            var feature_group_629e6cf81e06e75a1b5febe792342186 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_74a921ba7f3b4946fb5feeca4f0c5118 = L.marker(
+                [36.3965402682211, 127.400863729357],
+                {
+}
+            ).addTo(feature_group_629e6cf81e06e75a1b5febe792342186);
+        
+    
+            var div_icon_c427704bdb3ae5d37a99762ba83e0135 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#7b1fa2;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ucee4\ud53c\ucee4\ud53c\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_c7d42b09c5ca5c49d4ed1155d334bcf5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_bdeadb79a29ce9bd94b442ca0a0d9d31 = $(`<div id="html_bdeadb79a29ce9bd94b442ca0a0d9d31" style="width: 100.0%; height: 100.0%;"><b>커피커피</b><br>대전 유성구 전민로 38<br><span style='color:#7b1fa2'>카페</span><br><a href='https://map.kakao.com/link/search/커피커피' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_c7d42b09c5ca5c49d4ed1155d334bcf5.setContent(html_bdeadb79a29ce9bd94b442ca0a0d9d31);
+            
+        
+
+        marker_74a921ba7f3b4946fb5feeca4f0c5118.bindPopup(popup_c7d42b09c5ca5c49d4ed1155d334bcf5)
+        ;
+
+        
+    
+    
+            marker_74a921ba7f3b4946fb5feeca4f0c5118.bindTooltip(
+                `<div>
+                     커피커피 (카페)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_74a921ba7f3b4946fb5feeca4f0c5118.setIcon(div_icon_c427704bdb3ae5d37a99762ba83e0135);
+            
+    
+            var marker_b6f86f95a60af07a91421fd800c89ed2 = L.marker(
+                [36.3968889993363, 127.401835307409],
+                {
+}
+            ).addTo(feature_group_629e6cf81e06e75a1b5febe792342186);
+        
+    
+            var div_icon_2e69982519f564c1de4f8a0f8ee14ccf = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#7b1fa2;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc628\uc720\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_df0de0bd44a0069938aeed68d5493491 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f5ad1d8096200e03f7f2cc6234103a26 = $(`<div id="html_f5ad1d8096200e03f7f2cc6234103a26" style="width: 100.0%; height: 100.0%;"><b>온유</b><br>대전 유성구 전민로46번길 27<br><span style='color:#7b1fa2'>카페</span><br><a href='https://map.kakao.com/link/search/온유' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_df0de0bd44a0069938aeed68d5493491.setContent(html_f5ad1d8096200e03f7f2cc6234103a26);
+            
+        
+
+        marker_b6f86f95a60af07a91421fd800c89ed2.bindPopup(popup_df0de0bd44a0069938aeed68d5493491)
+        ;
+
+        
+    
+    
+            marker_b6f86f95a60af07a91421fd800c89ed2.bindTooltip(
+                `<div>
+                     온유 (카페)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b6f86f95a60af07a91421fd800c89ed2.setIcon(div_icon_2e69982519f564c1de4f8a0f8ee14ccf);
+            
+    
+            var marker_145f8b8b929d977e31578b437b6d39c8 = L.marker(
+                [36.3980473174496, 127.401847847078],
+                {
+}
+            ).addTo(feature_group_629e6cf81e06e75a1b5febe792342186);
+        
+    
+            var div_icon_3a0d1e27bb745919db93f7792a54a33d = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#7b1fa2;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ubbfc\uc815\uc804\ud1b5\ucc28\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_20067941028a3a80b9d80edf6d89079a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b3c3abee445cededbb09605074996532 = $(`<div id="html_b3c3abee445cededbb09605074996532" style="width: 100.0%; height: 100.0%;"><b>민정전통차</b><br>대전 유성구 전민로30번길 28<br><span style='color:#7b1fa2'>카페</span><br><a href='https://map.kakao.com/link/search/민정전통차' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_20067941028a3a80b9d80edf6d89079a.setContent(html_b3c3abee445cededbb09605074996532);
+            
+        
+
+        marker_145f8b8b929d977e31578b437b6d39c8.bindPopup(popup_20067941028a3a80b9d80edf6d89079a)
+        ;
+
+        
+    
+    
+            marker_145f8b8b929d977e31578b437b6d39c8.bindTooltip(
+                `<div>
+                     민정전통차 (카페)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_145f8b8b929d977e31578b437b6d39c8.setIcon(div_icon_3a0d1e27bb745919db93f7792a54a33d);
+            
+    
+            var marker_59d486b3e15d96c7a646a034331cedc2 = L.marker(
+                [36.3977676819636, 127.400668604362],
+                {
+}
+            ).addTo(feature_group_629e6cf81e06e75a1b5febe792342186);
+        
+    
+            var div_icon_a96b95b67e59c78948f13e0f87d9f9bf = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#7b1fa2;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc544\ud1a0\uc2a4\ucee4\ud53c\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_a18c1a33d739d40419d1b215e44125ef = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b8718d91f928ff17a6d20fae09c5d143 = $(`<div id="html_b8718d91f928ff17a6d20fae09c5d143" style="width: 100.0%; height: 100.0%;"><b>아토스커피</b><br>대전 유성구 전민로58번길 6<br><span style='color:#7b1fa2'>카페</span><br><a href='https://map.kakao.com/link/search/아토스커피' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_a18c1a33d739d40419d1b215e44125ef.setContent(html_b8718d91f928ff17a6d20fae09c5d143);
+            
+        
+
+        marker_59d486b3e15d96c7a646a034331cedc2.bindPopup(popup_a18c1a33d739d40419d1b215e44125ef)
+        ;
+
+        
+    
+    
+            marker_59d486b3e15d96c7a646a034331cedc2.bindTooltip(
+                `<div>
+                     아토스커피 (카페)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_59d486b3e15d96c7a646a034331cedc2.setIcon(div_icon_a96b95b67e59c78948f13e0f87d9f9bf);
+            
+    
+            var marker_f42811bd32d0facf8b666284ef83a35a = L.marker(
+                [36.3980505811101, 127.40277842756],
+                {
+}
+            ).addTo(feature_group_629e6cf81e06e75a1b5febe792342186);
+        
+    
+            var div_icon_aee1a3b31e860744d4cd752434a5c794 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#7b1fa2;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc778\uc2dc\ud2f0\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_b51d4dec63a4680fbecc9eb7a524280e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_516e5c708f58ae1275eaac342d903876 = $(`<div id="html_516e5c708f58ae1275eaac342d903876" style="width: 100.0%; height: 100.0%;"><b>인시티</b><br>대전 유성구 전민로22번길 38<br><span style='color:#7b1fa2'>카페</span><br><a href='https://map.kakao.com/link/search/인시티' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_b51d4dec63a4680fbecc9eb7a524280e.setContent(html_516e5c708f58ae1275eaac342d903876);
+            
+        
+
+        marker_f42811bd32d0facf8b666284ef83a35a.bindPopup(popup_b51d4dec63a4680fbecc9eb7a524280e)
+        ;
+
+        
+    
+    
+            marker_f42811bd32d0facf8b666284ef83a35a.bindTooltip(
+                `<div>
+                     인시티 (카페)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f42811bd32d0facf8b666284ef83a35a.setIcon(div_icon_aee1a3b31e860744d4cd752434a5c794);
+            
+    
+            var marker_34508936b944ed00bd4f741a19cd3950 = L.marker(
+                [36.3959625640601, 127.408645162692],
+                {
+}
+            ).addTo(feature_group_629e6cf81e06e75a1b5febe792342186);
+        
+    
+            var div_icon_f63b801e5f5e53f766fa61aca80a33a1 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#7b1fa2;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ubb38\uc9c0\ub3d9\uce74\ud398\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_49d60ccf3b10163a88f52a881da8d564 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f81c98a251e103e076988dc69b9c28a0 = $(`<div id="html_f81c98a251e103e076988dc69b9c28a0" style="width: 100.0%; height: 100.0%;"><b>문지동카페</b><br>대전 유성구 문지로316번길 54-4<br><span style='color:#7b1fa2'>카페</span><br><a href='https://map.kakao.com/link/search/문지동카페' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_49d60ccf3b10163a88f52a881da8d564.setContent(html_f81c98a251e103e076988dc69b9c28a0);
+            
+        
+
+        marker_34508936b944ed00bd4f741a19cd3950.bindPopup(popup_49d60ccf3b10163a88f52a881da8d564)
+        ;
+
+        
+    
+    
+            marker_34508936b944ed00bd4f741a19cd3950.bindTooltip(
+                `<div>
+                     문지동카페 (카페)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_34508936b944ed00bd4f741a19cd3950.setIcon(div_icon_f63b801e5f5e53f766fa61aca80a33a1);
+            
+    
+            var marker_96c7c7363cbdcd2e4ade545cb8e9075c = L.marker(
+                [36.4006151781749, 127.396187763789],
+                {
+}
+            ).addTo(feature_group_629e6cf81e06e75a1b5febe792342186);
+        
+    
+            var div_icon_f8063cff34e120b731624c18f07c11f6 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#7b1fa2;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uce74\ud398\uc62c\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_aa876ddd56aacf28cae821f907066ef1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8274a73f88e18d3cf754c9ee6d3360fa = $(`<div id="html_8274a73f88e18d3cf754c9ee6d3360fa" style="width: 100.0%; height: 100.0%;"><b>카페올</b><br>대전 유성구 유성대로1679번길 20<br><span style='color:#7b1fa2'>카페</span><br><a href='https://map.kakao.com/link/search/카페올' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_aa876ddd56aacf28cae821f907066ef1.setContent(html_8274a73f88e18d3cf754c9ee6d3360fa);
+            
+        
+
+        marker_96c7c7363cbdcd2e4ade545cb8e9075c.bindPopup(popup_aa876ddd56aacf28cae821f907066ef1)
+        ;
+
+        
+    
+    
+            marker_96c7c7363cbdcd2e4ade545cb8e9075c.bindTooltip(
+                `<div>
+                     카페올 (카페)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_96c7c7363cbdcd2e4ade545cb8e9075c.setIcon(div_icon_f8063cff34e120b731624c18f07c11f6);
+            
+    
+            var marker_30cf6888516ea94fb148f2b741207b77 = L.marker(
+                [36.3938346715511, 127.405780509713],
+                {
+}
+            ).addTo(feature_group_629e6cf81e06e75a1b5febe792342186);
+        
+    
+            var div_icon_7f30b8c46c446eb29c6be8ffed78cbcf = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#7b1fa2;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ub808\uc5b4\ub178\ud2b8\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_98b7abb1a8b1332aaaf9a108a98b0cbd = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c9435ec15d6998bfad3d5373d042cbda = $(`<div id="html_c9435ec15d6998bfad3d5373d042cbda" style="width: 100.0%; height: 100.0%;"><b>레어노트</b><br>대전 유성구 문지로299번길 94-10<br><span style='color:#7b1fa2'>카페</span><br><a href='https://map.kakao.com/link/search/레어노트' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_98b7abb1a8b1332aaaf9a108a98b0cbd.setContent(html_c9435ec15d6998bfad3d5373d042cbda);
+            
+        
+
+        marker_30cf6888516ea94fb148f2b741207b77.bindPopup(popup_98b7abb1a8b1332aaaf9a108a98b0cbd)
+        ;
+
+        
+    
+    
+            marker_30cf6888516ea94fb148f2b741207b77.bindTooltip(
+                `<div>
+                     레어노트 (카페)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_30cf6888516ea94fb148f2b741207b77.setIcon(div_icon_7f30b8c46c446eb29c6be8ffed78cbcf);
+            
+    
+            var marker_c47b8df530f138fd65d08102fc704edc = L.marker(
+                [36.3959556531702, 127.40937379566],
+                {
+}
+            ).addTo(feature_group_629e6cf81e06e75a1b5febe792342186);
+        
+    
+            var div_icon_915f4ad31920a81632954c42ebcfa058 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#7b1fa2;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ubbf8\ub4e4\ucee4\ud53c\ub7a9\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_e8e28432969347f2113ee55071c75748 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3bb8040d4bf04eba7c3ddc1b98cba265 = $(`<div id="html_3bb8040d4bf04eba7c3ddc1b98cba265" style="width: 100.0%; height: 100.0%;"><b>미들커피랩</b><br>대전 유성구 문지로316번길 54-16<br><span style='color:#7b1fa2'>카페</span><br><a href='https://map.kakao.com/link/search/미들커피랩' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_e8e28432969347f2113ee55071c75748.setContent(html_3bb8040d4bf04eba7c3ddc1b98cba265);
+            
+        
+
+        marker_c47b8df530f138fd65d08102fc704edc.bindPopup(popup_e8e28432969347f2113ee55071c75748)
+        ;
+
+        
+    
+    
+            marker_c47b8df530f138fd65d08102fc704edc.bindTooltip(
+                `<div>
+                     미들커피랩 (카페)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c47b8df530f138fd65d08102fc704edc.setIcon(div_icon_915f4ad31920a81632954c42ebcfa058);
+            
+    
+            var feature_group_96d197d5d7088f6e4934642b05f1fa59 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_7ff0a38e0d179d9f466993df5ce20085 = L.marker(
+                [36.3972040379222, 127.404587568775],
+                {
+}
+            ).addTo(feature_group_96d197d5d7088f6e4934642b05f1fa59);
+        
+    
+            var div_icon_37663aa90f810e8ff58280ecd7300c08 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#c62828;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud3ec\ucf00\uc0d0\ub77c\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_671159da4c8483de1904703c2b538a0d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_50eab195883be74cd4873beb9c657eca = $(`<div id="html_50eab195883be74cd4873beb9c657eca" style="width: 100.0%; height: 100.0%;"><b>포케샐라</b><br>대전 유성구 엑스포로 457<br><span style='color:#c62828'>초과식당</span><br><a href='https://map.kakao.com/link/search/포케샐라' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_671159da4c8483de1904703c2b538a0d.setContent(html_50eab195883be74cd4873beb9c657eca);
+            
+        
+
+        marker_7ff0a38e0d179d9f466993df5ce20085.bindPopup(popup_671159da4c8483de1904703c2b538a0d)
+        ;
+
+        
+    
+    
+            marker_7ff0a38e0d179d9f466993df5ce20085.bindTooltip(
+                `<div>
+                     포케샐라 (초과식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7ff0a38e0d179d9f466993df5ce20085.setIcon(div_icon_37663aa90f810e8ff58280ecd7300c08);
+            
+    
+            var marker_f2e27b1c6c262df2178ccb2f03bdcfba = L.marker(
+                [36.3988103169519, 127.400941713316],
+                {
+}
+            ).addTo(feature_group_96d197d5d7088f6e4934642b05f1fa59);
+        
+    
+            var div_icon_d63d75cee1032f0379471151a85316b6 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#c62828;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\uc5c4\ub9c8\uae40\ubc25\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_d681f2a3a76901c609d24d7273b569c3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1331267994e7a4202c28e98a0e59000b = $(`<div id="html_1331267994e7a4202c28e98a0e59000b" style="width: 100.0%; height: 100.0%;"><b>엄마김밥</b><br>대전 유성구 전민로70번길 12<br><span style='color:#c62828'>초과식당</span><br><a href='https://map.kakao.com/link/search/엄마김밥' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_d681f2a3a76901c609d24d7273b569c3.setContent(html_1331267994e7a4202c28e98a0e59000b);
+            
+        
+
+        marker_f2e27b1c6c262df2178ccb2f03bdcfba.bindPopup(popup_d681f2a3a76901c609d24d7273b569c3)
+        ;
+
+        
+    
+    
+            marker_f2e27b1c6c262df2178ccb2f03bdcfba.bindTooltip(
+                `<div>
+                     엄마김밥 (초과식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f2e27b1c6c262df2178ccb2f03bdcfba.setIcon(div_icon_d63d75cee1032f0379471151a85316b6);
+            
+    
+            var marker_9d0480dd61a98be57241031627f3b94b = L.marker(
+                [36.3988013990403, 127.401128495468],
+                {
+}
+            ).addTo(feature_group_96d197d5d7088f6e4934642b05f1fa59);
+        
+    
+            var div_icon_d92bf62b4a8a419c9e9766c22a57b867 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#c62828;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ubcf8\uac00\uc655\ubf08\uac10\uc790\ud0d5\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_11b247283d0c8e52f81b2b7f8a15cf02 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b20dca9ada1947a95eb2caf2abc11b44 = $(`<div id="html_b20dca9ada1947a95eb2caf2abc11b44" style="width: 100.0%; height: 100.0%;"><b>본가왕뼈감자탕</b><br>대전 유성구 전민로70번길 14<br><span style='color:#c62828'>초과식당</span><br><a href='https://map.kakao.com/link/search/본가왕뼈감자탕' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_11b247283d0c8e52f81b2b7f8a15cf02.setContent(html_b20dca9ada1947a95eb2caf2abc11b44);
+            
+        
+
+        marker_9d0480dd61a98be57241031627f3b94b.bindPopup(popup_11b247283d0c8e52f81b2b7f8a15cf02)
+        ;
+
+        
+    
+    
+            marker_9d0480dd61a98be57241031627f3b94b.bindTooltip(
+                `<div>
+                     본가왕뼈감자탕 (초과식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9d0480dd61a98be57241031627f3b94b.setIcon(div_icon_d92bf62b4a8a419c9e9766c22a57b867);
+            
+    
+            var marker_d240a5b972c15378fd580d6a0ecd43ff = L.marker(
+                [36.3946224755804, 127.399335706962],
+                {
+}
+            ).addTo(feature_group_96d197d5d7088f6e4934642b05f1fa59);
+        
+    
+            var div_icon_d738c17523ba123aeeec003fb5db1571 = L.divIcon({
+  "html": "\u003cdiv style=\"display:inline-block;transform:translate(-50%,-50%);font-size:12px;\n                color:#fff;font-weight:bold;background:#c62828;border-radius:6px;padding:3px 10px;\n                border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9;white-space:nowrap;\n                font-family:\u0027Malgun Gothic\u0027,sans-serif;cursor:pointer\"\u003e\ud559\uc2dd\u003c/div\u003e",
+  "iconSize": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_e54cb23fcd37ca50c4ff1f92c7bf637b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_02cf0a65639612d7b2ed4298329dc618 = $(`<div id="html_02cf0a65639612d7b2ed4298329dc618" style="width: 100.0%; height: 100.0%;"><b>학식</b><br>대전 유성구 문지로 193<br><span style='color:#c62828'>초과식당</span><br><a href='https://map.kakao.com/link/search/학식' target='_blank'>카카오맵에서 보기</a></div>`)[0];
+                popup_e54cb23fcd37ca50c4ff1f92c7bf637b.setContent(html_02cf0a65639612d7b2ed4298329dc618);
+            
+        
+
+        marker_d240a5b972c15378fd580d6a0ecd43ff.bindPopup(popup_e54cb23fcd37ca50c4ff1f92c7bf637b)
+        ;
+
+        
+    
+    
+            marker_d240a5b972c15378fd580d6a0ecd43ff.bindTooltip(
+                `<div>
+                     학식 (초과식당)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d240a5b972c15378fd580d6a0ecd43ff.setIcon(div_icon_d738c17523ba123aeeec003fb5db1571);
+            
+    
+            var layer_control_404512c92d98bc377cefbbb3a94e06f2_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_482542e15f0cb747d785efbbaa80a430,
+                },
+                overlays :  {
+                    "\uc77c\ubc18\uc2dd\ub2f9" : feature_group_570567ade2a48696bc506a5fc991f4b7,
+                    "\ud589\uc0ac \ud6c4 \uc2dd\ub2f9" : feature_group_d91da8485164f7d7efbd95726bc4e2b8,
+                    "\uc800\ub141\ud68c\uc2dd" : feature_group_a55be2b99b81d9e969e8f0d269d24de8,
+                    "\uce74\ud398" : feature_group_629e6cf81e06e75a1b5febe792342186,
+                    "\ucd08\uacfc\uc2dd\ub2f9" : feature_group_96d197d5d7088f6e4934642b05f1fa59,
+                },
+            };
+            let layer_control_404512c92d98bc377cefbbb3a94e06f2 = L.control.layers(
+                layer_control_404512c92d98bc377cefbbb3a94e06f2_layers.base_layers,
+                layer_control_404512c92d98bc377cefbbb3a94e06f2_layers.overlays,
+                {
+  "position": "topleft",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_9a51b4064659b9284928dd5496a506ac);
+
+        
+</script>
+</html>
