@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>모르는단어 영어 단어 발음 듣기</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      line-height: 1.8;
+    }
+
+    .word {
+      cursor: pointer;
+      color: #1a73e8;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+
+    .word:hover {
+      text-decoration: underline;
+    }
+
+    .meaning {
+      color: #333;
+    }
+
+    .item {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>모르는단어 영어 단어 발음 듣기</h1>
+
+  <div id="wordList">
+    
+        <div class="item">
+          <span class="word" data-word="expedite" onclick="speakWord(this.dataset.word)">
+            expedite
+          </span>
+          <span class="meaning">= 신속히 진행하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="prevent" onclick="speakWord(this.dataset.word)">
+            prevent
+          </span>
+          <span class="meaning">= 예방하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="dues" onclick="speakWord(this.dataset.word)">
+            dues
+          </span>
+          <span class="meaning">= 회비</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="probationary" onclick="speakWord(this.dataset.word)">
+            probationary
+          </span>
+          <span class="meaning">= 수습 기간 중인</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="contaminate" onclick="speakWord(this.dataset.word)">
+            contaminate
+          </span>
+          <span class="meaning">= 오염시키다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="Refrain" onclick="speakWord(this.dataset.word)">
+            Refrain
+          </span>
+          <span class="meaning">= 그만두다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="requisite" onclick="speakWord(this.dataset.word)">
+            requisite
+          </span>
+          <span class="meaning">= 필요한</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="courteous" onclick="speakWord(this.dataset.word)">
+            courteous
+          </span>
+          <span class="meaning">= 예의 바른</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="impede" onclick="speakWord(this.dataset.word)">
+            impede
+          </span>
+          <span class="meaning">= 방해하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="prolong" onclick="speakWord(this.dataset.word)">
+            prolong
+          </span>
+          <span class="meaning">= 길게 하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="adhere" onclick="speakWord(this.dataset.word)">
+            adhere
+          </span>
+          <span class="meaning">= 고수하다, 지키다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="stall" onclick="speakWord(this.dataset.word)">
+            stall
+          </span>
+          <span class="meaning">= 매대</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="receptacle" onclick="speakWord(this.dataset.word)">
+            receptacle
+          </span>
+          <span class="meaning">= 휴지통</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="dispose" onclick="speakWord(this.dataset.word)">
+            dispose
+          </span>
+          <span class="meaning">= 폐기하다, 처리하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="ets_test08_lc" onclick="speakWord(this.dataset.word)">
+            ets_test08_lc
+          </span>
+          <span class="meaning">= ets_test08_lc</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="taping" onclick="speakWord(this.dataset.word)">
+            taping
+          </span>
+          <span class="meaning">= 테이핑</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="prescription" onclick="speakWord(this.dataset.word)">
+            prescription
+          </span>
+          <span class="meaning">= 처방(전), 처방약</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="deposit" onclick="speakWord(this.dataset.word)">
+            deposit
+          </span>
+          <span class="meaning">= 입금하다, 예금하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="put out" onclick="speakWord(this.dataset.word)">
+            put out
+          </span>
+          <span class="meaning">= 꺼내 놓다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="informational" onclick="speakWord(this.dataset.word)">
+            informational
+          </span>
+          <span class="meaning">= 정보를 담은</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="stormy" onclick="speakWord(this.dataset.word)">
+            stormy
+          </span>
+          <span class="meaning">= 폭풍우가 치는</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="representative" onclick="speakWord(this.dataset.word)">
+            representative
+          </span>
+          <span class="meaning">= 직원, 대표자</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="eating utensils" onclick="speakWord(this.dataset.word)">
+            eating utensils
+          </span>
+          <span class="meaning">= 식기</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="stove" onclick="speakWord(this.dataset.word)">
+            stove
+          </span>
+          <span class="meaning">= 스토브, 전기레인지</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="saucepan" onclick="speakWord(this.dataset.word)">
+            saucepan
+          </span>
+          <span class="meaning">= 소스 냄비</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="rewire" onclick="speakWord(this.dataset.word)">
+            rewire
+          </span>
+          <span class="meaning">= 배선을 변경하다, 전선을 교체하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="fixture" onclick="speakWord(this.dataset.word)">
+            fixture
+          </span>
+          <span class="meaning">= 설비</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="compile" onclick="speakWord(this.dataset.word)">
+            compile
+          </span>
+          <span class="meaning">= 정리</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="partner with" onclick="speakWord(this.dataset.word)">
+            partner with
+          </span>
+          <span class="meaning">= ~와 제휴를 맺다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="publicity" onclick="speakWord(this.dataset.word)">
+            publicity
+          </span>
+          <span class="meaning">= 홍보 (효과), 광고</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="aerial photograph" onclick="speakWord(this.dataset.word)">
+            aerial photograph
+          </span>
+          <span class="meaning">= 항공 사진</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="community" onclick="speakWord(this.dataset.word)">
+            community
+          </span>
+          <span class="meaning">= 지역 사회</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="apply for" onclick="speakWord(this.dataset.word)">
+            apply for
+          </span>
+          <span class="meaning">= ~에 지원하다, ~을 신청하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="sponsor" onclick="speakWord(this.dataset.word)">
+            sponsor
+          </span>
+          <span class="meaning">= 후원하다, 지원하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="supplies" onclick="speakWord(this.dataset.word)">
+            supplies
+          </span>
+          <span class="meaning">= 용품, 물품</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="set up" onclick="speakWord(this.dataset.word)">
+            set up
+          </span>
+          <span class="meaning">= 마련하다, 설정하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="expense" onclick="speakWord(this.dataset.word)">
+            expense
+          </span>
+          <span class="meaning">= 지출 (비용), 경비</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="performer" onclick="speakWord(this.dataset.word)">
+            performer
+          </span>
+          <span class="meaning">= 연기자, 연주자</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="piece" onclick="speakWord(this.dataset.word)">
+            piece
+          </span>
+          <span class="meaning">= 작품</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="organizer" onclick="speakWord(this.dataset.word)">
+            organizer
+          </span>
+          <span class="meaning">= 주최자, 조직자</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="rebook" onclick="speakWord(this.dataset.word)">
+            rebook
+          </span>
+          <span class="meaning">= 다시 예약하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="compliment" onclick="speakWord(this.dataset.word)">
+            compliment
+          </span>
+          <span class="meaning">= 칭찬(의 말)</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="work order" onclick="speakWord(this.dataset.word)">
+            work order
+          </span>
+          <span class="meaning">= 작업 지시(서)</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="develop" onclick="speakWord(this.dataset.word)">
+            develop
+          </span>
+          <span class="meaning">= (질병, 문제 등이) 생기다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="address" onclick="speakWord(this.dataset.word)">
+            address
+          </span>
+          <span class="meaning">= 해결하다, 처리하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="objection" onclick="speakWord(this.dataset.word)">
+            objection
+          </span>
+          <span class="meaning">= 반대</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="administer" onclick="speakWord(this.dataset.word)">
+            administer
+          </span>
+          <span class="meaning">= 실시하다, 집행하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="renovate" onclick="speakWord(this.dataset.word)">
+            renovate
+          </span>
+          <span class="meaning">= 보수하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="quote" onclick="speakWord(this.dataset.word)">
+            quote
+          </span>
+          <span class="meaning">= 견적서</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="put together" onclick="speakWord(this.dataset.word)">
+            put together
+          </span>
+          <span class="meaning">= 만들다, 조립하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="ets_test08_rc" onclick="speakWord(this.dataset.word)">
+            ets_test08_rc
+          </span>
+          <span class="meaning">= ets_test08_rc</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="inevitable" onclick="speakWord(this.dataset.word)">
+            inevitable
+          </span>
+          <span class="meaning">= 불가피한</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="acquire" onclick="speakWord(this.dataset.word)">
+            acquire
+          </span>
+          <span class="meaning">= 습득하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="transcript" onclick="speakWord(this.dataset.word)">
+            transcript
+          </span>
+          <span class="meaning">= 성적 증명서</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="hesitate" onclick="speakWord(this.dataset.word)">
+            hesitate
+          </span>
+          <span class="meaning">= 망설이다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="credential" onclick="speakWord(this.dataset.word)">
+            credential
+          </span>
+          <span class="meaning">= 신임장</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="going-away" onclick="speakWord(this.dataset.word)">
+            going-away
+          </span>
+          <span class="meaning">= 떠나가는 길</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="scrubbing" onclick="speakWord(this.dataset.word)">
+            scrubbing
+          </span>
+          <span class="meaning">= 문지르기</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="company-wide" onclick="speakWord(this.dataset.word)">
+            company-wide
+          </span>
+          <span class="meaning">= 회사 전체</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="trivia" onclick="speakWord(this.dataset.word)">
+            trivia
+          </span>
+          <span class="meaning">= 하찮은 일</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="archaeologist" onclick="speakWord(this.dataset.word)">
+            archaeologist
+          </span>
+          <span class="meaning">= 고고학자</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="fame" onclick="speakWord(this.dataset.word)">
+            fame
+          </span>
+          <span class="meaning">= 명성</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="extensive" onclick="speakWord(this.dataset.word)">
+            extensive
+          </span>
+          <span class="meaning">= 광범위한</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="expose" onclick="speakWord(this.dataset.word)">
+            expose
+          </span>
+          <span class="meaning">= 폭로하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="prose" onclick="speakWord(this.dataset.word)">
+            prose
+          </span>
+          <span class="meaning">= 산문</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="credible" onclick="speakWord(this.dataset.word)">
+            credible
+          </span>
+          <span class="meaning">= 신뢰할 수 있는</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="understandable" onclick="speakWord(this.dataset.word)">
+            understandable
+          </span>
+          <span class="meaning">= 이해할 수 있는</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="repetitive" onclick="speakWord(this.dataset.word)">
+            repetitive
+          </span>
+          <span class="meaning">= 반복적인</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="conservative" onclick="speakWord(this.dataset.word)">
+            conservative
+          </span>
+          <span class="meaning">= 보수적인, 소극적인</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="extensive" onclick="speakWord(this.dataset.word)">
+            extensive
+          </span>
+          <span class="meaning">= 광범위한, 대대적인</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="encompass" onclick="speakWord(this.dataset.word)">
+            encompass
+          </span>
+          <span class="meaning">= 에워 싸다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="compound" onclick="speakWord(this.dataset.word)">
+            compound
+          </span>
+          <span class="meaning">= 화합물</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="agreed" onclick="speakWord(this.dataset.word)">
+            agreed
+          </span>
+          <span class="meaning">= agree 과거형 (자동사)</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="raffle" onclick="speakWord(this.dataset.word)">
+            raffle
+          </span>
+          <span class="meaning">= 당첨</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="claim" onclick="speakWord(this.dataset.word)">
+            claim
+          </span>
+          <span class="meaning">= 수령하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="exist" onclick="speakWord(this.dataset.word)">
+            exist
+          </span>
+          <span class="meaning">= 존속하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="lucrative" onclick="speakWord(this.dataset.word)">
+            lucrative
+          </span>
+          <span class="meaning">= 수익성이 높은</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="stand out" onclick="speakWord(this.dataset.word)">
+            stand out
+          </span>
+          <span class="meaning">= 두각을 나타내다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="inauguration" onclick="speakWord(this.dataset.word)">
+            inauguration
+          </span>
+          <span class="meaning">= 개점, 개관, 취임</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="tendency" onclick="speakWord(this.dataset.word)">
+            tendency
+          </span>
+          <span class="meaning">= 경향</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="flat rate" onclick="speakWord(this.dataset.word)">
+            flat rate
+          </span>
+          <span class="meaning">= 정가, 고정 요금</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="hydraulic" onclick="speakWord(this.dataset.word)">
+            hydraulic
+          </span>
+          <span class="meaning">= 유압의, 수압의</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="cucumber" onclick="speakWord(this.dataset.word)">
+            cucumber
+          </span>
+          <span class="meaning">= 오이</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="autonomous" onclick="speakWord(this.dataset.word)">
+            autonomous
+          </span>
+          <span class="meaning">= 자율적인, 자치의</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="frustrating" onclick="speakWord(this.dataset.word)">
+            frustrating
+          </span>
+          <span class="meaning">= 답답하게 하는, 실망스러운</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="in the meantime" onclick="speakWord(this.dataset.word)">
+            in the meantime
+          </span>
+          <span class="meaning">= 그동안, 그사이에</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="puncture" onclick="speakWord(this.dataset.word)">
+            puncture
+          </span>
+          <span class="meaning">= 구멍을 내다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="break room" onclick="speakWord(this.dataset.word)">
+            break room
+          </span>
+          <span class="meaning">= 휴게실</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="clinical" onclick="speakWord(this.dataset.word)">
+            clinical
+          </span>
+          <span class="meaning">= 임상의</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="refreshments" onclick="speakWord(this.dataset.word)">
+            refreshments
+          </span>
+          <span class="meaning">= 간식, 다과</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="floow-to-ceiling window" onclick="speakWord(this.dataset.word)">
+            floow-to-ceiling window
+          </span>
+          <span class="meaning">= 천창</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="complimentary" onclick="speakWord(this.dataset.word)">
+            complimentary
+          </span>
+          <span class="meaning">= 무료의, 칭찬의</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="ahead" onclick="speakWord(this.dataset.word)">
+            ahead
+          </span>
+          <span class="meaning">= 앞쪽에, 앞서</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="superintendent" onclick="speakWord(this.dataset.word)">
+            superintendent
+          </span>
+          <span class="meaning">= 국장, 관리자</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="municipal" onclick="speakWord(this.dataset.word)">
+            municipal
+          </span>
+          <span class="meaning">= 시의</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="maintenance hole" onclick="speakWord(this.dataset.word)">
+            maintenance hole
+          </span>
+          <span class="meaning">= 맨홀</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="debris" onclick="speakWord(this.dataset.word)">
+            debris
+          </span>
+          <span class="meaning">= 쓰레기, 잔해, 낙엽</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="cast" onclick="speakWord(this.dataset.word)">
+            cast
+          </span>
+          <span class="meaning">= 주조하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="find out" onclick="speakWord(this.dataset.word)">
+            find out
+          </span>
+          <span class="meaning">= 파악하다, 알아내다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="assistant superintendent" onclick="speakWord(this.dataset.word)">
+            assistant superintendent
+          </span>
+          <span class="meaning">= 부국장</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="supply chain" onclick="speakWord(this.dataset.word)">
+            supply chain
+          </span>
+          <span class="meaning">= 공급망</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="come up with" onclick="speakWord(this.dataset.word)">
+            come up with
+          </span>
+          <span class="meaning">= ~을 제시하다, ~을 생각해 내다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" data-word="viable" onclick="speakWord(this.dataset.word)">
+            viable
+          </span>
+          <span class="meaning">= 실행가능한</span>
+        </div>
+        
+  </div>
+
+  <script>
+    let voices = [];
+
+    function loadVoices() {
+      voices = speechSynthesis.getVoices();
+    }
+
+    loadVoices();
+    speechSynthesis.onvoiceschanged = loadVoices;
+
+    function speakWord(word) {
+      const currentVoices = speechSynthesis.getVoices();
+
+      if (currentVoices.length > 0) {
+        voices = currentVoices;
+      }
+
+      const utterance = new SpeechSynthesisUtterance(word);
+
+      utterance.lang = "en-US";
+      utterance.rate = 0.85;
+      utterance.volume = 1;
+
+      const englishVoice =
+        voices.find(v => v.lang === "en-US") ||
+        voices.find(v => v.lang.startsWith("en"));
+
+      if (englishVoice) {
+        utterance.voice = englishVoice;
+      }
+
+      utterance.onerror = function(event) {
+        if (
+          event.error === "interrupted" ||
+          event.error === "canceled"
+        ) {
+          return;
+        }
+
+        console.log("Speech error:", event.error);
+      };
+
+      speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>
