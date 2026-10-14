@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>수기 입력 단어 영어 단어 발음 듣기</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      line-height: 1.8;
+    }
+
+    .word {
+      cursor: pointer;
+      color: #1a73e8;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+
+    .word:hover {
+      text-decoration: underline;
+    }
+
+    .meaning {
+      color: #333;
+    }
+
+    .item {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>수기 입력 단어 영어 단어 발음 듣기</h1>
+
+  <div id="wordList">
+    
+        <div class="item">
+          <span class="word" onclick="speakWord('only after')">
+            only after
+          </span>
+          <span class="meaning">= ~한 후에야 비로소</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('lag')">
+            lag
+          </span>
+          <span class="meaning">= 여유(텀)</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('vow to')">
+            vow to
+          </span>
+          <span class="meaning">= ~하겠다고 맹세하다, 굳게 약속하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('in lieu of')">
+            in lieu of
+          </span>
+          <span class="meaning">= ~대신에</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('lieu')">
+            lieu
+          </span>
+          <span class="meaning">= 장소</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('curbs')">
+            curbs
+          </span>
+          <span class="meaning">= 연석</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('prove unsuccessful')">
+            prove unsuccessful
+          </span>
+          <span class="meaning">= 실패한 것으로 드러나다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('make A more affordable')">
+            make A more affordable
+          </span>
+          <span class="meaning">= A를 더 저렴하게 만들다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('pertaining to')">
+            pertaining to
+          </span>
+          <span class="meaning">= ~와 관련된</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('familiarize oneself with')">
+            familiarize oneself with
+          </span>
+          <span class="meaning">= ~을 숙지하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('move into a market')">
+            move into a market
+          </span>
+          <span class="meaning">= 시장에 진출하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('flagship store')">
+            flagship store
+          </span>
+          <span class="meaning">= 대표 매장, 플래그십 매장</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('rank A in order')">
+            rank A in order
+          </span>
+          <span class="meaning">= A에 순위를 매기다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('from most to least important')">
+            from most to least important
+          </span>
+          <span class="meaning">= 가장 중요한 것부터 가장 덜 중요한 것까지</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('consider A for B')">
+            consider A for B
+          </span>
+          <span class="meaning">= B의 대상으로 A를 고려하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('Most significantly')">
+            Most significantly
+          </span>
+          <span class="meaning">= 가장 중요하게, 특히</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('In any case')">
+            In any case
+          </span>
+          <span class="meaning">= 어쨌든</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('among problem')">
+            among problem
+          </span>
+          <span class="meaning">= 전치사구, V S 도치</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('Annual Employee Recognition and Honors')">
+            Annual Employee Recognition and Honors
+          </span>
+          <span class="meaning">= 연례 직원 포상 및 표창</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('became a household name')">
+            became a household name
+          </span>
+          <span class="meaning">= 누구나 다 아는 이름이 되었다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('repair that big')">
+            repair that big
+          </span>
+          <span class="meaning">= 그 정도로 큰 수리</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('for perspective')">
+            for perspective
+          </span>
+          <span class="meaning">= 차모로, 비교해보면</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('take advantage of')">
+            take advantage of
+          </span>
+          <span class="meaning">= ~을 이용하다, ~을 활용하다</span>
+        </div>
+        
+        <div class="item">
+          <span class="word" onclick="speakWord('be stocked with')">
+            be stocked with
+          </span>
+          <span class="meaning">= ~로 채워져 있는</span>
+        </div>
+        
+  </div>
+
+  <script>
+    let voices = [];
+
+    function loadVoices() {
+      voices = speechSynthesis.getVoices();
+    }
+
+    loadVoices();
+    speechSynthesis.onvoiceschanged = loadVoices;
+
+    function speakWord(word) {
+
+      const currentVoices = speechSynthesis.getVoices();
+
+      if (currentVoices.length > 0) {
+        voices = currentVoices;
+      }
+
+      const utterance = new SpeechSynthesisUtterance(word);
+
+      utterance.lang = "en-US";
+      utterance.rate = 0.85;
+      utterance.volume = 1;
+
+      const englishVoice =
+        voices.find(v => v.lang === "en-US") ||
+        voices.find(v => v.lang.startsWith("en"));
+
+      if (englishVoice) {
+        utterance.voice = englishVoice;
+      }
+
+      utterance.onerror = function(event) {
+
+        if (
+          event.error === "interrupted" ||
+          event.error === "canceled"
+        ) {
+          return;
+        }
+
+        console.log("Speech error:", event.error);
+      };
+
+      speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>
